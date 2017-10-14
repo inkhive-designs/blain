@@ -1,7 +1,7 @@
 IH Business Pro WordPress Theme
 GNU GPL v3 (http://www.gnu.org/licenses/gpl.html)
 Copyrights 2015. Inkhive.
-http://inkhive.com/product/ih-business-pro/
+http://inkhive.com/product/blain/
 
 
 IH Business Pro

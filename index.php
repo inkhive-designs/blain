@@ -13,12 +13,14 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-areas <?php do_action('ihbp_primary-width') ?>">
+	<div id="primary" class="content-areas <?php do_action('blain_primary-width') ?>">
 		<?php if ( is_home() ) : ?>
-			<div class="section-title"><span><?php _e("From the Blog",'ih-business-pro'); ?></span></div> <?php
+			<div class="section-title"><span><?php _e("From the Blog",'blain'); ?></span></div>
+            <div id="curve"></div>
+            <?php
 		endif; ?>
-		
-		<main id="main" class="site-main <?php do_action('ihbp_masonry_class') ?>" role="main">
+
+		<main id="main" class="site-main <?php do_action('blain_masonry_class') ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -28,7 +30,7 @@ get_header(); ?>
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 */
-					do_action('ihbp_blog_layout'); 
+					do_action('blain_blog_layout'); 
 					
 				?>
 
@@ -38,7 +40,7 @@ get_header(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+			<?php get_template_part( 'modules/content/content', 'none' ); ?>
 
 		<?php endif; ?>
 

@@ -1,123 +1,123 @@
 <?php
-function ihbp_customize_register_layouts( $wp_customize ) {
+function blain_customize_register_layouts( $wp_customize ) {
 	// Layout and Design
-	$wp_customize->add_panel( 'ihbp_design_panel', array(
+	$wp_customize->add_panel( 'blain_design_panel', array(
 	    'priority'       => 40,
 	    'capability'     => 'edit_theme_options',
-	    'title'          => __('Design & Layout','ih-business-pro'),
+	    'title'          => __('Design & Layout','blain'),
 	) );
 	
 	$wp_customize->add_section(
-	    'ihbp_design_options',
+	    'blain_design_options',
 	    array(
-	        'title'     => __('Blog Layout','ih-business-pro'),
+	        'title'     => __('Blog Layout','blain'),
 	        'priority'  => 0,
-	        'panel'     => 'ihbp_design_panel'
+	        'panel'     => 'blain_design_panel'
 	    )
 	);
 	
 	
 	$wp_customize->add_setting(
-		'ihbp_blog_layout',
-		array( 'sanitize_callback' => 'ihbp_sanitize_blog_layout', 'default' => 'ihbp' )
+		'blain_blog_layout',
+		array( 'sanitize_callback' => 'blain_sanitize_blog_layout', 'default' => 'blain' )
 	);
 	
-	function ihbp_sanitize_blog_layout( $input ) {
-		if ( in_array($input, array('grid','grid_2_column','grid_3_column','ihbp') ) )
+	function blain_sanitize_blog_layout( $input ) {
+		if ( in_array($input, array('grid','grid_2_column','grid_3_column','blain') ) )
 			return $input;
 		else 
-			return 'ihbp';	
+			return 'blain';	
 	}
 	
 	$wp_customize->add_control(
-		'ihbp_blog_layout',array(
-				'label' => __('Select Layout','ih-business-pro'),
-				'description' => __('This is the Layout for your Recent Posts Page, Categories & Archives Pages. The Front Page of your site would use a Separate Layout.','ih-business-pro'),
-				'settings' => 'ihbp_blog_layout',
-				'section'  => 'ihbp_design_options',
+		'blain_blog_layout',array(
+				'label' => __('Select Layout','blain'),
+				'description' => __('This is the Layout for your Recent Posts Page, Categories & Archives Pages. The Front Page of your site would use a Separate Layout.','blain'),
+				'settings' => 'blain_blog_layout',
+				'section'  => 'blain_design_options',
 				'type' => 'select',
 				'choices' => array(
-						'ihbp' => __('Default Theme Layout','ih-business-pro'),
-						'grid' => __('Basic Blog Layout','ih-business-pro'),
-						'grid_2_column' => __('Grid - 2 Column','ih-business-pro'),
-						'grid_3_column' => __('Grid - 3 Column','ih-business-pro'),
+						'blain' => __('Default Theme Layout','blain'),
+						'grid' => __('Basic Blog Layout','blain'),
+						'grid_2_column' => __('Grid - 2 Column','blain'),
+						'grid_3_column' => __('Grid - 3 Column','blain'),
 						
 					)
 			)
 	);
 	
 	$wp_customize->add_section(
-	    'ihbp_sidebar_options',
+	    'blain_sidebar_options',
 	    array(
-	        'title'     => __('Sidebar Layout','ih-business-pro'),
+	        'title'     => __('Sidebar Layout','blain'),
 	        'priority'  => 0,
-	        'panel'     => 'ihbp_design_panel'
+	        'panel'     => 'blain_design_panel'
 	    )
 	);
 	
 	$wp_customize->add_setting(
-		'ihbp_disable_sidebar',
-		array( 'sanitize_callback' => 'ihbp_sanitize_checkbox' )
+		'blain_disable_sidebar',
+		array( 'sanitize_callback' => 'blain_sanitize_checkbox' )
 	);
 	
 	$wp_customize->add_control(
-			'ihbp_disable_sidebar', array(
-		    'settings' => 'ihbp_disable_sidebar',
-		    'label'    => __( 'Disable Sidebar Everywhere.','ih-business-pro' ),
-		    'section'  => 'ihbp_sidebar_options',
+			'blain_disable_sidebar', array(
+		    'settings' => 'blain_disable_sidebar',
+		    'label'    => __( 'Disable Sidebar Everywhere.','blain' ),
+		    'section'  => 'blain_sidebar_options',
 		    'type'     => 'checkbox',
 		    'default'  => false
 		)
 	);
 	
 	$wp_customize->add_setting(
-		'ihbp_disable_sidebar_home',
-		array( 'sanitize_callback' => 'ihbp_sanitize_checkbox' )
+		'blain_disable_sidebar_home',
+		array( 'sanitize_callback' => 'blain_sanitize_checkbox' )
 	);
 	
 	$wp_customize->add_control(
-			'ihbp_disable_sidebar_home', array(
-		    'settings' => 'ihbp_disable_sidebar_home',
-		    'label'    => __( 'Disable Sidebar on Home/Blog.','ih-business-pro' ),
-		    'section'  => 'ihbp_sidebar_options',
+			'blain_disable_sidebar_home', array(
+		    'settings' => 'blain_disable_sidebar_home',
+		    'label'    => __( 'Disable Sidebar on Home/Blog.','blain' ),
+		    'section'  => 'blain_sidebar_options',
 		    'type'     => 'checkbox',
-		    'active_callback' => 'ihbp_show_sidebar_options',
+		    'active_callback' => 'blain_show_sidebar_options',
 		    'default'  => false
 		)
 	);
 	
 	$wp_customize->add_setting(
-		'ihbp_disable_sidebar_front',
-		array( 'sanitize_callback' => 'ihbp_sanitize_checkbox' )
+		'blain_disable_sidebar_front',
+		array( 'sanitize_callback' => 'blain_sanitize_checkbox' )
 	);
 	
 	$wp_customize->add_control(
-			'ihbp_disable_sidebar_front', array(
-		    'settings' => 'ihbp_disable_sidebar_front',
-		    'label'    => __( 'Disable Sidebar on Front Page.','ih-business-pro' ),
-		    'section'  => 'ihbp_sidebar_options',
+			'blain_disable_sidebar_front', array(
+		    'settings' => 'blain_disable_sidebar_front',
+		    'label'    => __( 'Disable Sidebar on Front Page.','blain' ),
+		    'section'  => 'blain_sidebar_options',
 		    'type'     => 'checkbox',
-		    'active_callback' => 'ihbp_show_sidebar_options',
+		    'active_callback' => 'blain_show_sidebar_options',
 		    'default'  => false
 		)
 	);
 	
 	
 	$wp_customize->add_setting(
-		'ihbp_sidebar_width',
+		'blain_sidebar_width',
 		array(
 			'default' => 4,
-		    'sanitize_callback' => 'ihbp_sanitize_positive_number' )
+		    'sanitize_callback' => 'blain_sanitize_positive_number' )
 	);
 	
 	$wp_customize->add_control(
-			'ihbp_sidebar_width', array(
-		    'settings' => 'ihbp_sidebar_width',
-		    'label'    => __( 'Sidebar Width','ih-business-pro' ),
-		    'description' => __('Min: 25%, Default: 33%, Max: 40%','ih-business-pro'),
-		    'section'  => 'ihbp_sidebar_options',
+			'blain_sidebar_width', array(
+		    'settings' => 'blain_sidebar_width',
+		    'label'    => __( 'Sidebar Width','blain' ),
+		    'description' => __('Min: 25%, Default: 33%, Max: 40%','blain'),
+		    'section'  => 'blain_sidebar_options',
 		    'type'     => 'range',
-		    'active_callback' => 'ihbp_show_sidebar_options',
+		    'active_callback' => 'blain_show_sidebar_options',
 		    'input_attrs' => array(
 		        'min'   => 3,
 		        'max'   => 5,
@@ -129,42 +129,70 @@ function ihbp_customize_register_layouts( $wp_customize ) {
 	);
 	
 	/* Active Callback Function */
-	function ihbp_show_sidebar_options($control) {
+	function blain_show_sidebar_options($control) {
 	   
-	    $option = $control->manager->get_setting('ihbp_disable_sidebar');
+	    $option = $control->manager->get_setting('blain_disable_sidebar');
 	    return $option->value() == false ;
 	    
 	}
 	
-	function ihbp_sanitize_text( $input ) {
+	function blain_sanitize_text( $input ) {
 	    return wp_kses_post( force_balance_tags( $input ) );
 	}
 	
 	$wp_customize-> add_section(
-    'ihbp_custom_footer',
+    'blain_custom_footer',
     array(
-    	'title'			=> __('Custom Footer Text','ih-business-pro'),
-    	'description'	=> __('Enter your Own Copyright Text.','ih-business-pro'),
+    	'title'			=> __('Custom Footer Text','blain'),
+    	'description'	=> __('Enter your Own Copyright Text.','blain'),
     	'priority'		=> 11,
-    	'panel'			=> 'ihbp_design_panel'
+    	'panel'			=> 'blain_design_panel'
     	)
     );
     
 	$wp_customize->add_setting(
-	'ihbp_footer_text',
+	'blain_footer_text',
 	array(
-		'default'		=> 'ih-business-pro',
+		'default'		=> 'blain',
 		'sanitize_callback'	=> 'sanitize_text_field'
 		)
 	);
 	
 	$wp_customize->add_control(	 
-	       'ihbp_footer_text',
+	       'blain_footer_text',
 	        array(
-	            'section' => 'ihbp_custom_footer',
-	            'settings' => 'ihbp_footer_text',
+	            'section' => 'blain_custom_footer',
+	            'settings' => 'blain_footer_text',
 	            'type' => 'text'
 	        )
 	);
+//footer bg images
+    $wp_customize->add_section(
+        'blain_footer_bg_sec',
+        array(
+            'title'     => __('Footer Background Image','blain'),
+            'priority'  => 50,
+            'panel'     => 'blain_design_panel'
+        )
+    );
+	$wp_customize->add_setting('blain_footer_bg_image',
+    array(
+        'sanitize_callback' => 'esc_url_raw',
+    )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize, 'blain_footer_bg_image',
+            array (
+                'setting' => 'blain_footer_bg_image',
+                'section' => 'blain_footer_bg_sec',
+                'label' => __('Footer Background Images', 'blain'),
+                'description' => __('Upload an image to display for Footer background', 'blain'),
+            )
+        )
+    );
+
+
 }
-add_action( 'customize_register', 'ihbp_customize_register_layouts' );
+add_action( 'customize_register', 'blain_customize_register_layouts' );

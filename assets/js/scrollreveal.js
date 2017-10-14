@@ -356,7 +356,7 @@
       // --
       // See section 4.2. in the Documentation:
       // https://github.com/jlmakes/scrollreveal.js#42-improve-user-experience
-      elem.styles.inline = elem.domEl.getAttribute('style') || 'ih-business-pro'
+      elem.styles.inline = elem.domEl.getAttribute('style') || 'blain'
       elem.styles.inline += '; visibility: visible; '
 
       // grab the elements existing opacity.
@@ -364,7 +364,7 @@
 
       // grab the elements existing transitions.
       if (!computed.transition || computed.transition === 'all 0s ease 0s') {
-        elem.styles.computed.transition = 'ih-business-pro'
+        elem.styles.computed.transition = 'blain'
       } else {
         elem.styles.computed.transition = computed.transition + ', '
       }

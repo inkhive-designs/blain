@@ -516,7 +516,7 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
-	"\/assets\/theme-styles\/blog-layouts\/ihbp-layouts.less": {
+	"\/assets\/theme-styles\/blog-layouts\/blain-layouts.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
 		"disableJavascript": 0,
@@ -524,8 +524,8 @@
 		"ieCompatibility": 1,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/theme-styles\/blog-layouts\/ihbp-layouts.less",
-		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/ihbp-layouts.css",
+		"inputAbbreviatedPath": "\/assets\/theme-styles\/blog-layouts\/blain-layouts.less",
+		"outputAbbreviatedPath": "\/assets\/theme-styles\/css\/blain-layouts.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1504,11 +1504,11 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/framework\/layouts\/content-ihbp.php": {
+	"\/framework\/layouts\/content-blain.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/framework\/layouts\/content-ihbp.php",
+		"inputAbbreviatedPath": "\/framework\/layouts\/content-blain.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1849,7 +1849,7 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "ih-business-pro",
+	"displayValue": "blain",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "compass_orange"
 	},

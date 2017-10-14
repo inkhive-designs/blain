@@ -6,7 +6,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'ihbp_setup' ) ) :
+if ( ! function_exists( 'blain_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -14,7 +14,7 @@ if ( ! function_exists( 'ihbp_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function ihbp_setup() {
+function blain_setup() {
 
 
 	// Add default posts and comments RSS feed links to head.
@@ -46,8 +46,10 @@ function ihbp_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'ih-business-pro' ),
-		'footer' => __( 'Footer Menu', 'ih-business-pro' ),
+		'primary-left' => __( 'Primary Left Menu', 'blain' ),
+        'primary-right' => __( 'Primary Right Menu', 'blain' ),
+		'footer' => __( 'Footer Menu', 'blain' ),
+        'mobile-menu' => __( 'Mobile Menu', 'blain' ),
 	) );
 
 	/*
@@ -67,14 +69,14 @@ function ihbp_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'ihbp_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'blain_custom_background_args', array(
 		'default-color' => 'ffffff',
-		'default-image' => 'ih-business-pro',
+		'default-image' => 'blain',
 	) ) );
 	
-	add_image_size('ihbp-pop-thumb',542, 340, true );
-	add_image_size('ihbp-thumb',600, 600, true );
-	add_image_size('ihbp-slider-thumb',860, 430, true );
+	add_image_size('blain-pop-thumb',542, 340, true );
+	add_image_size('blain-thumb',600, 600, true );
+	add_image_size('blain-slider-thumb',860, 430, true );
 	
 	//Set up the Plugin
 	add_theme_support( 'ihss-all' );
@@ -83,7 +85,6 @@ function ihbp_setup() {
 	add_theme_support( 'ih-counters' );
 	add_theme_support( 'ih-parallax' );
 
-	
 }
-endif; // ihbp_setup
-add_action( 'after_setup_theme', 'ihbp_setup' );
+endif; // blain_setup
+add_action( 'after_setup_theme', 'blain_setup' );

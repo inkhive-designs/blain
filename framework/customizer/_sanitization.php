@@ -1,6 +1,6 @@
 <?php
 /* Sanitization Functions Common to Multiple Settings go Here, Specific Sanitization Functions are defined along with add_setting() */
-	function ihbp_sanitize_checkbox( $input ) {
+	function blain_sanitize_checkbox( $input ) {
 	    if ( $input == 1 ) {
 	        return 1;
 	    } else {
@@ -8,14 +8,14 @@
 	    }
 	}
 	
-	function ihbp_sanitize_positive_number( $input ) {
+	function blain_sanitize_positive_number( $input ) {
 		if ( ($input >= 0) && is_numeric($input) )
 			return $input;
 		else
 			return '';
 	}
 	
-	function ihbp_sanitize_category( $input ) {
+	function blain_sanitize_category( $input ) {
 		if ( term_exists(get_cat_name( $input ), 'category') )
 			return $input;
 		else 

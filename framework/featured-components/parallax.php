@@ -3,7 +3,7 @@
 	<div class="layer"></div>
 	<div class="container">
 				<?php $section_title = esc_html(IHSS::fetch('parallax_title1'));
-					ihbp_section_title( $section_title ); ?>
+					blain_section_title( $section_title ); ?>
 	            <?php
 	            for ( $i = 1; $i <= 1; $i++ ) :
 	

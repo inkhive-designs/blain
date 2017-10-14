@@ -15,7 +15,7 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'ih-business-pro' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'blain' ),
 				'after'  => '</div>',
 			) );
 		?>

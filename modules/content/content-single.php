@@ -11,7 +11,7 @@
 		
 		
 		<div class="entry-meta">
-			<?php ihbp_posted_on(); ?>
+			<?php blain_posted_on(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -25,13 +25,13 @@
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'ih-business-pro' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'blain' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php ihbp_entry_footer(); ?>
+		<?php blain_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

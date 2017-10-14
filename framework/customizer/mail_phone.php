@@ -1,34 +1,34 @@
 <?php
-function ihbp_customize_register_header_mail( $wp_customize ) {
+function blain_customize_register_header_mail( $wp_customize ) {
 	
-	$wp_customize->add_section('ihbp_mail', array(
-		'title' => __('Email & Phone','ih-business-pro'),
-		'panel' => 'ihbp_header_panel'	
+	$wp_customize->add_section('blain_mail', array(
+		'title' => __('Email & Phone','blain'),
+		'panel' => 'blain_header_panel'	
 	));
 	
-	$wp_customize->add_setting( 'ihbp_mailid' , array(
+	$wp_customize->add_setting( 'blain_mailid' , array(
 	    'sanitize_callback' => 'sanitize_text_field'
 	) );
 	
 	$wp_customize->add_control(
-	'ihbp_mailid', array(
-		'label' => __('Your Email','ih-business-pro'),
-		'section' => 'ihbp_mail',
-		'settings' => 'ihbp_mailid',
+	'blain_mailid', array(
+		'label' => __('Your Email','blain'),
+		'section' => 'blain_mail',
+		'settings' => 'blain_mailid',
 		'type' => 'text',
 	) );
 	
-	$wp_customize->add_setting( 'ihbp_phone' , array(
+	$wp_customize->add_setting( 'blain_phone' , array(
 	    'sanitize_callback' => 'sanitize_text_field'
 	) );
 	
 	$wp_customize->add_control(
-	'ihbp_phone', array(
-		'label' => __('Your Phone No.','ih-business-pro'),
-		'section' => 'ihbp_mail',
-		'settings' => 'ihbp_phone',
+	'blain_phone', array(
+		'label' => __('Your Phone No.','blain'),
+		'section' => 'blain_mail',
+		'settings' => 'blain_phone',
 		'type' => 'text',
 	) );
 	
 }
-add_action( 'customize_register', 'ihbp_customize_register_header_mail' );
+add_action( 'customize_register', 'blain_customize_register_header_mail' );

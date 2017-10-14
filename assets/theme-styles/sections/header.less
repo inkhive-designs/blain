@@ -27,11 +27,30 @@
 #masthead {
 	position: relative;
 	z-index: 90;
+	.logo-wrapper{
+		z-index: 99999;
+		text-align: center;
+		overflow: visible;
+		position: relative;
+		img{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			top: -36px;
+		}
+
+	}
+	.menu-wrapper,.menu-left,.menu-right{
+		padding: 0px;
+	}
+	.main-logo{
+		bottom: 50px;
+	}
 	.site-branding { 
-		padding: 25px 0;
+		padding: 8px 0;
 		overflow: hidden;
 		display: inline-block;
-		float: left;
+		float: none;
 		text-align: left;
 		@media screen and (max-width: 991px) {
 				float: none;
@@ -59,12 +78,6 @@
 			color: darken(@content, 15%);
 		}
 	}
-	h2.site-description {
-		font-weight: 300;
-		font-size: 15px;
-		margin-top: 10px;
-		color: @content;
-	}
 	
 	@media screen and (max-width: 767px) {
 		text-align: center;	
@@ -72,18 +85,30 @@
 			min-height: 430px;
 		}
 	}
+	@media screen and (max-width: 1200px) {
+		.masthead-inner{
+			padding-right: 0px;
+			padding-left: 0px;
+		}
+	}
 }
 
 
 #site-logo {
-	display: inline-block;
-	float: left;
+	display: block;
+	float: none;
 	@media screen and (max-width: 768px) {
 			float: none;
 		}
 	img {
 		max-height: 120px;
 		width: auto;
-		margin-right: 10px;
+		//margin-right: 10px;
+		@media screen and (min-width: 981px) and (max-width: 1200px) {
+			max-height: 90px;
+		}
+		@media screen and (min-width: 767px) and (max-width: 980px) {
+			max-height: 70px;
+		}
 	}
 }

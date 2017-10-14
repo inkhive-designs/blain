@@ -1,23 +1,36 @@
 <?php
-function ihbp_customize_register_social( $wp_customize ) {
+function blain_customize_register_social( $wp_customize ) {
 		// Social Icons
-	$wp_customize->add_section('ihbp_social_section', array(
-			'title' => __('Social Icons','ih-business-pro'),
+	$wp_customize->add_section('blain_social_section', array(
+			'title' => __('Social Icons','blain'),
 			'priority' => 44 ,
-			'panel' => 'ihbp_header_panel'
+			'panel' => 'blain_header_panel'
 	));
-	
+	//enable/disable
+    $wp_customize->add_setting(
+        'blain_social_enable',
+        array( 'sanitize_callback' => 'blain_sanitize_checkbox' )
+    );
+
+    $wp_customize->add_control(
+        'blain_social_enable', array(
+            'settings' => 'blain_social_enable',
+            'label'    => __( 'Enable Social Icons.', 'blain' ),
+            'section'  => 'blain_social_section',
+            'type'     => 'checkbox',
+        )
+    );
 	$social_networks = array( //Redefinied in Sanitization Function.
-					'none' => __('-','ih-business-pro'),
-					'facebook' => __('Facebook','ih-business-pro'),
-					'twitter' => __('Twitter','ih-business-pro'),
-					'google-plus' => __('Google Plus','ih-business-pro'),
-					'instagram' => __('Instagram','ih-business-pro'),
-					'rss' => __('RSS Feeds','ih-business-pro'),
-					'vine' => __('Vine','ih-business-pro'),
-					'vimeo-square' => __('Vimeo','ih-business-pro'),
-					'youtube' => __('Youtube','ih-business-pro'),
-					'flickr' => __('Flickr','ih-business-pro'),
+					'none' => __('-','blain'),
+					'facebook' => __('Facebook','blain'),
+					'twitter' => __('Twitter','blain'),
+					'google-plus' => __('Google Plus','blain'),
+					'instagram' => __('Instagram','blain'),
+					'rss' => __('RSS Feeds','blain'),
+					'vine' => __('Vine','blain'),
+					'vimeo-square' => __('Vimeo','blain'),
+					'youtube' => __('Youtube','blain'),
+					'flickr' => __('Flickr','blain'),
 				);
 				
 	$social_count = count($social_networks);
@@ -25,35 +38,35 @@ function ihbp_customize_register_social( $wp_customize ) {
 	for ($x = 1 ; $x <= ($social_count - 3) ; $x++) :
 			
 		$wp_customize->add_setting(
-			'ihbp_social_'.$x, array(
-				'sanitize_callback' => 'ihbp_sanitize_social',
+			'blain_social_'.$x, array(
+				'sanitize_callback' => 'blain_sanitize_social',
 				'default' => 'none'
 			));
 
-		$wp_customize->add_control( 'ihbp_social_'.$x, array(
-					'settings' => 'ihbp_social_'.$x,
-					'label' => __('Icon ','ih-business-pro').$x,
-					'section' => 'ihbp_social_section',
+		$wp_customize->add_control( 'blain_social_'.$x, array(
+					'settings' => 'blain_social_'.$x,
+					'label' => __('Icon ','blain').$x,
+					'section' => 'blain_social_section',
 					'type' => 'select',
 					'choices' => $social_networks,			
 		));
 		
 		$wp_customize->add_setting(
-			'ihbp_social_url'.$x, array(
+			'blain_social_url'.$x, array(
 				'sanitize_callback' => 'esc_url_raw'
 			));
 
-		$wp_customize->add_control( 'ihbp_social_url'.$x, array(
-					'settings' => 'ihbp_social_url'.$x,
-					'description' => __('Icon ','ih-business-pro').$x.__(' Url','ih-business-pro'),
-					'section' => 'ihbp_social_section',
+		$wp_customize->add_control( 'blain_social_url'.$x, array(
+					'settings' => 'blain_social_url'.$x,
+					'description' => __('Icon ','blain').$x.__(' Url','blain'),
+					'section' => 'blain_social_section',
 					'type' => 'url',
 					'choices' => $social_networks,			
 		));
 		
 	endfor;
 	
-	function ihbp_sanitize_social( $input ) {
+	function blain_sanitize_social( $input ) {
 		$social_networks = array(
 					'none' ,
 					'facebook',
@@ -69,7 +82,7 @@ function ihbp_customize_register_social( $wp_customize ) {
 		if ( in_array($input, $social_networks) )
 			return $input;
 		else
-			return 'ih-business-pro';	
+			return 'blain';	
 	}
 }
-add_action( 'customize_register', 'ihbp_customize_register_social' );
+add_action( 'customize_register', 'blain_customize_register_social' );

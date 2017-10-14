@@ -5,12 +5,12 @@
  
 //Create an Array to Store Post Ids of all posts that have been displayed already.
 
-$ihbp_fpost_ids = array();
-if ( get_theme_mod('ihbp_featposts_enable') ) :
+$blain_fpost_ids = array();
+if ( get_theme_mod('blain_featposts_enable') ) :
 	
 	$args = array( 
 		'posts_per_page' => 3,
-		'cat' => esc_html(get_theme_mod('ihbp_featposts_cat')),
+		'cat' => esc_html(get_theme_mod('blain_featposts_cat')),
 		'ignore_sticky_posts' => true,
 	);
 	
@@ -19,18 +19,18 @@ if ( get_theme_mod('ihbp_featposts_enable') ) :
 	while ( $lastposts->have_posts() ) :
 	  $lastposts->the_post(); 
 	  
-	  global $ihbp_fpost_ids;
-	  $ihbp_fpost_ids[] = get_the_id(); 
+	  global $blain_fpost_ids;
+	  $blain_fpost_ids[] = get_the_id(); 
 	  
 	 endwhile;
 	 wp_reset_postdata(); 
 endif;				
 		
-function ihbp_exclude_single_posts_home($query) {		
-	global $ihbp_fpost_ids;
+function blain_exclude_single_posts_home($query) {		
+	global $blain_fpost_ids;
 
 	if ($query->is_home() && $query->is_main_query()) {
-	    $query->set('post__not_in', $ihbp_fpost_ids);
+	    $query->set('post__not_in', $blain_fpost_ids);
 	  }
 }	
-add_action('pre_get_posts', 'ihbp_exclude_single_posts_home');
+add_action('pre_get_posts', 'blain_exclude_single_posts_home');

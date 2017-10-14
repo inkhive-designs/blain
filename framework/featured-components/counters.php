@@ -7,7 +7,7 @@
 <div id="counters" class="featured-section-area">
 	<div class="container">
 				<?php $section_title = esc_html(IHSS::fetch('counter_title'));
-					ihbp_section_title( $section_title ); ?>
+					blain_section_title( $section_title ); ?>
 	            <?php
 	            for ( $i = 1; $i <= 4; $i++ ) :
 	

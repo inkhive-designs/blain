@@ -15,7 +15,7 @@
         // Useful variables. Play carefully.
         var vars = {
             currentSlide: 0,
-            currentImage: 'ih-business-pro',
+            currentImage: 'blain',
             totalSlides: 0,
             running: false,
             paused: false,
@@ -31,7 +31,7 @@
         var kids = slider.children();
         kids.each(function() {
             var child = $(this);
-            var link = 'ih-business-pro';
+            var link = 'blain';
             if(!child.is('img')){
                 if(child.is('a')){
                     child.addClass('nivo-imageLink');
@@ -43,7 +43,7 @@
             var childWidth = (childWidth === 0) ? child.attr('width') : child.width(),
                 childHeight = (childHeight === 0) ? child.attr('height') : child.height();
 
-            if(link !== 'ih-business-pro'){
+            if(link !== 'blain'){
                 link.css('display','none');
             }
             child.css('display','none');
@@ -93,7 +93,7 @@
         // Process caption function
         var processCaption = function(settings){
             var nivoCaption = $('.nivo-caption', slider);
-            if(vars.currentImage.attr('title') != 'ih-business-pro' && vars.currentImage.attr('title') != undefined){
+            if(vars.currentImage.attr('title') != 'blain' && vars.currentImage.attr('title') != undefined){
                 var title = vars.currentImage.attr('title');
                 if(title.substr(0,1) == '#') title = $(title).html();   
 
@@ -126,7 +126,7 @@
             $(slider).on('click', 'a.nivo-prevNav', function(){
                 if(vars.running) { return false; }
                 clearInterval(timer);
-                timer = 'ih-business-pro';
+                timer = 'blain';
                 vars.currentSlide -= 2;
                 nivoRun(slider, kids, settings, 'prev');
             });
@@ -134,7 +134,7 @@
             $(slider).on('click', 'a.nivo-nextNav', function(){
                 if(vars.running) { return false; }
                 clearInterval(timer);
-                timer = 'ih-business-pro';
+                timer = 'blain';
                 nivoRun(slider, kids, settings, 'next');
             });
         }
@@ -163,7 +163,7 @@
                 if(vars.running) return false;
                 if($(this).hasClass('active')) return false;
                 clearInterval(timer);
-                timer = 'ih-business-pro';
+                timer = 'blain';
                 sliderImg.attr('src', vars.currentImage.attr('src'));
                 vars.currentSlide = $(this).attr('rel') - 1;
                 nivoRun(slider, kids, settings, 'control');
@@ -175,11 +175,11 @@
             slider.hover(function(){
                 vars.paused = true;
                 clearInterval(timer);
-                timer = 'ih-business-pro';
+                timer = 'blain';
             }, function(){
                 vars.paused = false;
                 // Restart the timer
-                if(timer === 'ih-business-pro' && !settings.manualAdvance){
+                if(timer === 'blain' && !settings.manualAdvance){
                     timer = setInterval(function(){ nivoRun(slider, kids, settings, false); }, settings.pauseTime);
                 }
             });
@@ -200,7 +200,7 @@
                 $(kids[vars.currentSlide]).css('display','block');
             }
             // Restart the timer
-            if(timer === 'ih-business-pro' && !vars.paused && !settings.manualAdvance){
+            if(timer === 'blain' && !vars.paused && !settings.manualAdvance){
                 timer = setInterval(function(){ nivoRun(slider, kids, settings, false); }, settings.pauseTime);
             }
             // Trigger the afterChange callback
@@ -343,7 +343,7 @@
             $('.nivo-box', slider).remove();
             
             var currentEffect = settings.effect,
-                anims = 'ih-business-pro';
+                anims = 'blain';
                 
             // Generate random effect
             if(settings.effect === 'random'){
@@ -369,10 +369,10 @@
             vars.running = true;
             var timeBuff = 0,
                 i = 0,
-                slices = 'ih-business-pro',
-                firstSlice = 'ih-business-pro',
-                totalBoxes = 'ih-business-pro',
-                boxes = 'ih-business-pro';
+                slices = 'blain',
+                firstSlice = 'blain',
+                totalBoxes = 'blain',
+                boxes = 'blain';
             
             if(currentEffect === 'sliceDown' || currentEffect === 'sliceDownRight' || currentEffect === 'sliceDownLeft'){
                 createSlices(slider, settings, vars);
@@ -386,7 +386,7 @@
                     slice.css({ 'top': '0px' });
                     if(i === settings.slices-1){
                         setTimeout(function(){
-                            slice.animate({opacity:'1.0' }, settings.animSpeed, 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                            slice.animate({opacity:'1.0' }, settings.animSpeed, 'blain', function(){ slider.trigger('nivo:animFinished'); });
                         }, (100 + timeBuff));
                     } else {
                         setTimeout(function(){
@@ -408,7 +408,7 @@
                     slice.css({ 'bottom': '0px' });
                     if(i === settings.slices-1){
                         setTimeout(function(){
-                            slice.animate({opacity:'1.0' }, settings.animSpeed, 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                            slice.animate({opacity:'1.0' }, settings.animSpeed, 'blain', function(){ slider.trigger('nivo:animFinished'); });
                         }, (100 + timeBuff));
                     } else {
                         setTimeout(function(){
@@ -438,7 +438,7 @@
                     
                     if(v === settings.slices-1){
                         setTimeout(function(){
-                            slice.animate({opacity:'1.0' }, settings.animSpeed, 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                            slice.animate({opacity:'1.0' }, settings.animSpeed, 'blain', function(){ slider.trigger('nivo:animFinished'); });
                         }, (100 + timeBuff));
                     } else {
                         setTimeout(function(){
@@ -459,7 +459,7 @@
                     slice.css({ top:'0px', width:'0px' });
                     if(i === settings.slices-1){
                         setTimeout(function(){
-                            slice.animate({ width:origWidth, opacity:'1.0' }, settings.animSpeed, 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                            slice.animate({ width:origWidth, opacity:'1.0' }, settings.animSpeed, 'blain', function(){ slider.trigger('nivo:animFinished'); });
                         }, (100 + timeBuff));
                     } else {
                         setTimeout(function(){
@@ -477,7 +477,7 @@
                     'width': slider.width() + 'px'
                 });
     
-                firstSlice.animate({ opacity:'1.0' }, (settings.animSpeed*2), 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                firstSlice.animate({ opacity:'1.0' }, (settings.animSpeed*2), 'blain', function(){ slider.trigger('nivo:animFinished'); });
             } else if(currentEffect === 'slideInRight'){
                 createSlices(slider, settings, vars);
                 
@@ -487,7 +487,7 @@
                     'opacity': '1'
                 });
 
-                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'blain', function(){ slider.trigger('nivo:animFinished'); });
             } else if(currentEffect === 'slideInLeft'){
                 createSlices(slider, settings, vars);
                 
@@ -495,15 +495,15 @@
                 firstSlice.css({
                     'width': '0px',
                     'opacity': '1',
-                    'left': 'ih-business-pro',
+                    'left': 'blain',
                     'right': '0px'
                 });
 
-                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'ih-business-pro', function(){ 
+                firstSlice.animate({ width: slider.width() + 'px' }, (settings.animSpeed*2), 'blain', function(){ 
                     // Reset positioning
                     firstSlice.css({
                         'left': '0px',
-                        'right': 'ih-business-pro'
+                        'right': 'blain'
                     });
                     slider.trigger('nivo:animFinished'); 
                 });
@@ -519,7 +519,7 @@
                     var box = $(this);
                     if(i === totalBoxes-1){
                         setTimeout(function(){
-                            box.animate({ opacity:'1' }, settings.animSpeed, 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                            box.animate({ opacity:'1' }, settings.animSpeed, 'blain', function(){ slider.trigger('nivo:animFinished'); });
                         }, (100 + timeBuff));
                     } else {
                         setTimeout(function(){
@@ -572,7 +572,7 @@
                                 }
                                 if(i === totalBoxes-1){
                                     setTimeout(function(){
-                                        box.animate({ opacity:'1', width:w, height:h }, settings.animSpeed/1.3, 'ih-business-pro', function(){ slider.trigger('nivo:animFinished'); });
+                                        box.animate({ opacity:'1', width:w, height:h }, settings.animSpeed/1.3, 'blain', function(){ slider.trigger('nivo:animFinished'); });
                                     }, (100 + time));
                                 } else {
                                     setTimeout(function(){

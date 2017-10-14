@@ -24,31 +24,31 @@ class Themeisle_Customizer_Notify_Section extends WP_Customize_Section {
 	 * @access public
 	 * @var    string
 	 */
-	public $recommended_actions = 'ih-business-pro';
+	public $recommended_actions = 'blain';
 	/**
 	 * Recommended Plugins.
 	 *
 	 * @var string
 	 */
-	public $recommended_plugins = 'ih-business-pro';
+	public $recommended_plugins = 'blain';
 	/**
 	 * Total number of required actions.
 	 *
 	 * @var string
 	 */
-	public $total_actions = 'ih-business-pro';
+	public $total_actions = 'blain';
 	/**
 	 * Plugin text.
 	 *
 	 * @var string
 	 */
-	public $plugin_text = 'ih-business-pro';
+	public $plugin_text = 'blain';
 	/**
 	 * Dismiss button.
 	 *
 	 * @var string
 	 */
-	public $dismiss_button = 'ih-business-pro';
+	public $dismiss_button = 'blain';
 
 	/**
 	 * Check if plugin is installed/activated
@@ -195,7 +195,7 @@ class Themeisle_Customizer_Notify_Section extends WP_Customize_Section {
 				if ( $active['needs'] !== 'install' && $active['status'] ) {
 					$ti_customizer_notify_recommended_action['class'] = 'active';
 				} else {
-					$ti_customizer_notify_recommended_action['class'] = 'ih-business-pro';
+					$ti_customizer_notify_recommended_action['class'] = 'blain';
 				}
 
 				switch ( $active['needs'] ) {
@@ -240,7 +240,7 @@ class Themeisle_Customizer_Notify_Section extends WP_Customize_Section {
 			if ( $active['needs'] !== 'install' && $active['status'] ) {
 				$ti_customizer_notify_recommended_plugin['class'] = 'active';
 			} else {
-				$ti_customizer_notify_recommended_plugin['class'] = 'ih-business-pro';
+				$ti_customizer_notify_recommended_plugin['class'] = 'blain';
 			}
 
 			switch ( $active['needs'] ) {

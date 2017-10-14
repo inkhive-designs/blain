@@ -7,12 +7,12 @@
 
 get_header(); ?>
 
-	<section id="primary" class="<?php do_action('ihbp_primary-width') ?> content-area">
+	<section id="primary" class="<?php do_action('blain_primary-width') ?> content-area">
 		<header class="page-header">
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'ih-business-pro' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'blain' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		</header><!-- .page-header -->
 			
-		<main id="main" class="site-main <?php do_action('ihbp_masonry_class') ?>" role="main">
+		<main id="main" class="site-main <?php do_action('blain_masonry_class') ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -23,7 +23,7 @@ get_header(); ?>
 				/**
 				 * Run the loop for the search to output the results.
 				  */
-				do_action('ihbp_blog_layout'); 
+				do_action('blain_blog_layout'); 
 				?>
 
 			<?php endwhile; ?>

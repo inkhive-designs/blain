@@ -105,7 +105,7 @@ if (typeof jQuery === 'undefined') {
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, 'ih-business-pro') // strip for ie7
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, 'blain') // strip for ie7
     }
 
     var $parent = $(selector)
@@ -500,7 +500,7 @@ if (typeof jQuery === 'undefined') {
   var clickHandler = function (e) {
     var href
     var $this   = $(this)
-    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, 'ih-business-pro')) // strip for ie7
+    var $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, 'blain')) // strip for ie7
     if (!$target.hasClass('carousel')) return
     var options = $.extend({}, $target.data(), $this.data())
     var slideIndex = $this.attr('data-slide-to')
@@ -608,7 +608,7 @@ if (typeof jQuery === 'undefined') {
     var complete = function () {
       this.$element
         .removeClass('collapsing')
-        .addClass('collapse in')[dimension]('ih-business-pro')
+        .addClass('collapse in')[dimension]('blain')
       this.transitioning = 0
       this.$element
         .trigger('shown.bs.collapse')
@@ -687,7 +687,7 @@ if (typeof jQuery === 'undefined') {
   function getTargetFromTrigger($trigger) {
     var href
     var target = $trigger.attr('data-target')
-      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, 'ih-business-pro') // strip for ie7
+      || (href = $trigger.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, 'blain') // strip for ie7
 
     return $(target)
   }
@@ -852,7 +852,7 @@ if (typeof jQuery === 'undefined') {
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, 'ih-business-pro') // strip for ie7
+      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, 'blain') // strip for ie7
     }
 
     var $parent = selector && $(selector)
@@ -1078,7 +1078,7 @@ if (typeof jQuery === 'undefined') {
 
   Modal..backdrop = function (callback) {
     var that = this
-    var animate = this.$element.hasClass('fade') ? 'fade' : 'ih-business-pro'
+    var animate = this.$element.hasClass('fade') ? 'fade' : 'blain'
 
     if (this.isShown && this.options.backdrop) {
       var doAnimate = $.support.transition && animate
@@ -1139,15 +1139,15 @@ if (typeof jQuery === 'undefined') {
     var modalIsOverflowing = this.$element[0].scrollHeight > document.documentElement.clientHeight
 
     this.$element.css({
-      paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : 'ih-business-pro',
-      paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : 'ih-business-pro'
+      paddingLeft:  !this.bodyIsOverflowing && modalIsOverflowing ? this.scrollbarWidth : 'blain',
+      paddingRight: this.bodyIsOverflowing && !modalIsOverflowing ? this.scrollbarWidth : 'blain'
     })
   }
 
   Modal..resetAdjustments = function () {
     this.$element.css({
-      paddingLeft: 'ih-business-pro',
-      paddingRight: 'ih-business-pro'
+      paddingLeft: 'blain',
+      paddingRight: 'blain'
     })
   }
 
@@ -1162,7 +1162,7 @@ if (typeof jQuery === 'undefined') {
   }
 
   Modal..resetScrollbar = function () {
-    this.$body.css('padding-right', 'ih-business-pro')
+    this.$body.css('padding-right', 'blain')
   }
 
   Modal..measureScrollbar = function () { // thx walsh
@@ -1211,7 +1211,7 @@ if (typeof jQuery === 'undefined') {
   $(document).on('click.bs.modal.data-api', '[data-toggle="modal"]', function (e) {
     var $this   = $(this)
     var href    = $this.attr('href')
-    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, 'ih-business-pro'))) // strip for ie7
+    var $target = $($this.attr('data-target') || (href && href.replace(/.*(?=#[^\s]+$)/, 'blain'))) // strip for ie7
     var option  = $target.data('bs.modal') ? 'toggle' : $.extend({ remote: !/#/.test(href) && href }, $target.data(), $this.data())
 
     if ($this.is('a')) e.preventDefault()
@@ -1264,7 +1264,7 @@ if (typeof jQuery === 'undefined') {
     selector: false,
     template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
     trigger: 'hover focus',
-    title: 'ih-business-pro',
+    title: 'blain',
     delay: 0,
     html: false,
     container: false,
@@ -1298,7 +1298,7 @@ if (typeof jQuery === 'undefined') {
     }
 
     this.options.selector ?
-      (this._options = $.extend({}, this.options, { trigger: 'manual', selector: 'ih-business-pro' })) :
+      (this._options = $.extend({}, this.options, { trigger: 'manual', selector: 'blain' })) :
       this.fixTitle()
   }
 
@@ -1401,7 +1401,7 @@ if (typeof jQuery === 'undefined') {
 
       var autoToken = /\s?auto?\s?/i
       var autoPlace = autoToken.test(placement)
-      if (autoPlace) placement = placement.replace(autoToken, 'ih-business-pro') || 'top'
+      if (autoPlace) placement = placement.replace(autoToken, 'blain') || 'top'
 
       $tip
         .detach()
@@ -1504,7 +1504,7 @@ if (typeof jQuery === 'undefined') {
   Tooltip..replaceArrow = function (delta, dimension, isHorizontal) {
     this.arrow()
       .css(isHorizontal ? 'left' : 'top', 50 * (1 - delta / dimension) + '%')
-      .css(isHorizontal ? 'top' : 'left', 'ih-business-pro')
+      .css(isHorizontal ? 'top' : 'left', 'blain')
   }
 
   Tooltip..setContent = function () {
@@ -1548,7 +1548,7 @@ if (typeof jQuery === 'undefined') {
   Tooltip..fixTitle = function () {
     var $e = this.$element
     if ($e.attr('title') || typeof ($e.attr('data-original-title')) != 'string') {
-      $e.attr('data-original-title', $e.attr('title') || 'ih-business-pro').attr('title', 'ih-business-pro')
+      $e.attr('data-original-title', $e.attr('title') || 'blain').attr('title', 'blain')
     }
   }
 
@@ -1732,7 +1732,7 @@ if (typeof jQuery === 'undefined') {
   Popover.DEFAULTS = $.extend({}, $.fn.tooltip.Constructor.DEFAULTS, {
     placement: 'right',
     trigger: 'click',
-    content: 'ih-business-pro',
+    content: 'blain',
     template: '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
   })
 
@@ -1847,7 +1847,7 @@ if (typeof jQuery === 'undefined') {
     this.$body          = $('body')
     this.$scrollElement = $(element).is('body') ? $(window) : $(element)
     this.options        = $.extend({}, ScrollSpy.DEFAULTS, options)
-    this.selector       = (this.options.target || 'ih-business-pro') + ' .nav li > a'
+    this.selector       = (this.options.target || 'blain') + ' .nav li > a'
     this.offsets        = []
     this.targets        = []
     this.activeTarget   = null
@@ -2032,7 +2032,7 @@ if (typeof jQuery === 'undefined') {
 
     if (!selector) {
       selector = $this.attr('href')
-      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, 'ih-business-pro') // strip for ie7
+      selector = selector && selector.replace(/.*(?=#[^\s]*$)/, 'blain') // strip for ie7
     }
 
     if ($this.parent('li').hasClass('active')) return
@@ -2245,9 +2245,9 @@ if (typeof jQuery === 'undefined') {
     var affix = this.getState(scrollHeight, height, offsetTop, offsetBottom)
 
     if (this.affixed != affix) {
-      if (this.unpin != null) this.$element.css('top', 'ih-business-pro')
+      if (this.unpin != null) this.$element.css('top', 'blain')
 
-      var affixType = 'affix' + (affix ? '-' + affix : 'ih-business-pro')
+      var affixType = 'affix' + (affix ? '-' + affix : 'blain')
       var e         = $.Event(affixType + '.bs.affix')
 
       this.$element.trigger(e)

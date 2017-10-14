@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area <?php do_action('ihbp_primary-width') ?>">
+	<div id="primary" class="content-area <?php do_action('blain_primary-width') ?>">
 		<header class="page-header">
 			<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -17,7 +17,7 @@ get_header(); ?>
 			?>
 		</header><!-- .page-header -->
 			
-		<main id="main" class="site-main <?php do_action('ihbp_masonry_class') ?>" role="main">
+		<main id="main" class="site-main <?php do_action('blain_masonry_class') ?>" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -27,7 +27,7 @@ get_header(); ?>
 				<?php
 					/* Include the Post-Format-specific template for the content.
 					 */
-					do_action('ihbp_blog_layout'); 
+					do_action('blain_blog_layout'); 
 				?>
 
 			<?php endwhile; ?>

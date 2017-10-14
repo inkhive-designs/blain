@@ -9,8 +9,8 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }
 
-if ( ihbp_load_sidebar() ) : ?>
-<div id="secondary" class="widget-area <?php do_action('ihbp_secondary-width') ?>" role="complementary">
+if ( blain_load_sidebar() ) : ?>
+<div id="secondary" class="widget-area <?php do_action('blain_secondary-width') ?>" role="complementary">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div><!-- #secondary -->
 <?php endif; ?>

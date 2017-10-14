@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php ihbp_posted_on(); ?>
+			<?php blain_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -19,20 +19,20 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'ih-business-pro' ),
+				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'blain' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'ih-business-pro' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'blain' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php ihbp_entry_footer(); ?>
+		<?php blain_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

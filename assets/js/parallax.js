@@ -52,7 +52,7 @@
       this.imageSrc = this.$element.attr('src');
     }
 
-    var positions = (this.position + 'ih-business-pro').toLowerCase().match(/\S+/g) || [];
+    var positions = (this.position + 'blain').toLowerCase().match(/\S+/g) || [];
 
     if (positions.length < 1) {
       positions.push('center');
@@ -88,8 +88,8 @@
     }
 
     this.position =
-      this.positionX + (isNaN(this.positionX)? 'ih-business-pro' : 'px') + ' ' +
-      this.positionY + (isNaN(this.positionY)? 'ih-business-pro' : 'px');
+      this.positionX + (isNaN(this.positionX)? 'blain' : 'px') + ' ' +
+      this.positionY + (isNaN(this.positionY)? 'blain' : 'px');
 
     if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
       if (this.imageSrc && this.iosFix && !this.$element.is('img')) {

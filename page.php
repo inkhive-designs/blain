@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<div id="primary-mono" class="content-area <?php do_action('ihbp_primary-width') ?> page">
+	<div id="primary-mono" class="content-area <?php do_action('blain_primary-width') ?> page">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

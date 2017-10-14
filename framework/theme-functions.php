@@ -17,13 +17,13 @@ require get_template_directory() . '/framework/admin_modules/section_titles.php'
 /*
 ** Function to check if Sidebar is enabled on Current Page 
 */
-function ihbp_load_sidebar() {
+function blain_load_sidebar() {
 	$load_sidebar = true;
-	if ( get_theme_mod('ihbp_disable_sidebar') ) :
+	if ( get_theme_mod('blain_disable_sidebar') ) :
 		$load_sidebar = false;
-	elseif( get_theme_mod('ihbp_disable_sidebar_home',true) && is_home() )	:
+	elseif( get_theme_mod('blain_disable_sidebar_home',true) && is_home() )	:
 		$load_sidebar = false;
-	elseif( get_theme_mod('ihbp_disable_sidebar_front',true) && is_front_page() ) :
+	elseif( get_theme_mod('blain_disable_sidebar_front',true) && is_front_page() ) :
 		$load_sidebar = false;
 	endif;
 	
@@ -33,40 +33,40 @@ function ihbp_load_sidebar() {
 /*
 ** Add Body Class
 */
-function ihbp_body_class( $classes ) {
+function blain_body_class( $classes ) {
 	
-	$sidebar_class_name =  ihbp_load_sidebar() ? "sidebar-enabled" : "sidebar-disabled" ;
+	$sidebar_class_name =  blain_load_sidebar() ? "sidebar-enabled" : "sidebar-disabled" ;
     return array_merge( $classes, array( $sidebar_class_name ) );   
 }
-add_filter( 'body_class', 'ihbp_body_class' );
+add_filter( 'body_class', 'blain_body_class' );
 
 
 /*
 **	Determining Sidebar and Primary Width
 */
-function ihbp_primary_class() {
-	$sw = esc_html(get_theme_mod('ihbp_sidebar_width',4));
+function blain_primary_class() {
+	$sw = esc_html(get_theme_mod('blain_sidebar_width',4));
 	$class = "col-md-".(12-$sw);
 	
-	if ( !ihbp_load_sidebar() ) 
+	if ( !blain_load_sidebar() ) 
 		$class = "col-md-12";
 	
 	echo $class;
 }
-add_action('ihbp_primary-width', 'ihbp_primary_class');
+add_action('blain_primary-width', 'blain_primary_class');
 
-function ihbp_secondary_class() {
-	$sw = esc_html(get_theme_mod('ihbp_sidebar_width',4));
+function blain_secondary_class() {
+	$sw = esc_html(get_theme_mod('blain_sidebar_width',4));
 	$class = "col-md-".$sw;
 	
 	echo $class;
 }
-add_action('ihbp_secondary-width', 'ihbp_secondary_class');
+add_action('blain_secondary-width', 'blain_secondary_class');
 
 /*
 **	Helper Function to Convert Colors
 */
-function ihbp_hex2rgb($hex) {
+function blain_hex2rgb($hex) {
    $hex = str_replace("#", "", $hex);
    if(strlen($hex) == 3) {
       $r = hexdec(substr($hex,0,1).substr($hex,0,1));
@@ -82,47 +82,47 @@ function ihbp_hex2rgb($hex) {
    //return $rgb; // returns an array with the rgb values
 }
 
-function ihbp_fade($color, $val) {
-	return "rgba(".ihbp_hex2rgb($color).",". $val.")";
+function blain_fade($color, $val) {
+	return "rgba(".blain_hex2rgb($color).",". $val.")";
 }
 
 //Function to Trim Excerpt Length & more..
-function ihbp_excerpt_length( $length ) {
+function blain_excerpt_length( $length ) {
 	return 23;
 }
-add_filter( 'excerpt_length', 'ihbp_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'blain_excerpt_length', 999 );
 
-function ihbp_excerpt_more( $more ) {
+function blain_excerpt_more( $more ) {
 	return '...';
 }
-add_filter( 'excerpt_more', 'ihbp_excerpt_more' );
+add_filter( 'excerpt_more', 'blain_excerpt_more' );
 
 
 
 /*
 ** Function to Get Theme Layout 
 */
-function ihbp_get_blog_layout(){
+function blain_get_blog_layout(){
 	$ldir = 'framework/layouts/content';
-	if (get_theme_mod('ihbp_blog_layout') ) :
-		get_template_part( $ldir , get_theme_mod('ihbp_blog_layout') );
+	if (get_theme_mod('blain_blog_layout') ) :
+		get_template_part( $ldir , get_theme_mod('blain_blog_layout') );
 	else :
-		get_template_part( $ldir ,'ihbp');	
+		get_template_part( $ldir ,'blain');	
 	endif;	
 }
-add_action('ihbp_blog_layout', 'ihbp_get_blog_layout');
+add_action('blain_blog_layout', 'blain_get_blog_layout');
 
 /*
 ** Function to Set Masonry Class 
 */
-function ihbp_set_masonry_class(){
-	if ( get_theme_mod('ihbp_blog_layout') != "masonry" ) :
+function blain_set_masonry_class(){
+	if ( get_theme_mod('blain_blog_layout') != "masonry" ) :
 		//DO NOTHING
 	else :
 		echo "masonry-main";	
 	endif;	
 }
-add_action('ihbp_masonry_class', 'ihbp_set_masonry_class');
+add_action('blain_masonry_class', 'blain_set_masonry_class');
 
 
 

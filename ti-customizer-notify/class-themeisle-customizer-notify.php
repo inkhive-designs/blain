@@ -109,9 +109,9 @@ class Themeisle_Customizer_Notify {
 		$this->recommended_actions = isset( $this->config['recommended_actions'] ) ? $this->config['recommended_actions'] : array();
 		$this->recommended_plugins = isset( $this->config['recommended_plugins'] ) ? $this->config['recommended_plugins'] : array();
 
-		$this->recommended_actions_title = isset( $this->config['recommended_actions_title'] ) ? $this->config['recommended_actions_title'] : 'ih-business-pro';
-		$this->recommended_plugins_title = isset( $this->config['recommended_plugins_title'] ) ? $this->config['recommended_plugins_title'] : 'ih-business-pro';
-		$this->dismiss_button = isset( $this->config['dismiss_button'] ) ? $this->config['dismiss_button'] : 'ih-business-pro';
+		$this->recommended_actions_title = isset( $this->config['recommended_actions_title'] ) ? $this->config['recommended_actions_title'] : 'blain';
+		$this->recommended_plugins_title = isset( $this->config['recommended_plugins_title'] ) ? $this->config['recommended_plugins_title'] : 'blain';
+		$this->dismiss_button = isset( $this->config['dismiss_button'] ) ? $this->config['dismiss_button'] : 'blain';
 
 		$ti_customizer_notify_recommended_plugins = array();
 		$ti_customizer_notify_recommended_actions = array();
@@ -124,9 +124,9 @@ class Themeisle_Customizer_Notify {
 			$ti_customizer_notify_recommended_actions = $this->recommended_actions;
 		}
 
-		$install_button_label = isset( $this->config['install_button_label'] ) ? $this->config['install_button_label'] : 'ih-business-pro';
-		$activate_button_label = isset( $this->config['activate_button_label'] ) ? $this->config['activate_button_label'] : 'ih-business-pro';
-		$deactivate_button_label = isset( $this->config['deactivate_button_label'] ) ? $this->config['deactivate_button_label'] : 'ih-business-pro';
+		$install_button_label = isset( $this->config['install_button_label'] ) ? $this->config['install_button_label'] : 'blain';
+		$activate_button_label = isset( $this->config['activate_button_label'] ) ? $this->config['activate_button_label'] : 'blain';
+		$deactivate_button_label = isset( $this->config['deactivate_button_label'] ) ? $this->config['deactivate_button_label'] : 'blain';
 
 	}
 
@@ -167,7 +167,7 @@ class Themeisle_Customizer_Notify {
 				'ajaxurl'                  => admin_url( 'admin-ajax.php' ),
 				'template_directory'       => get_template_directory_uri(),
 				'base_path'                => admin_url(),
-				'activating_string'        => __( 'Activating', 'ih-business-pro' ),
+				'activating_string'        => __( 'Activating', 'blain' ),
 			)
 		);
 

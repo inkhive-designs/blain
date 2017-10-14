@@ -2212,7 +2212,7 @@
   position: relative;
 }
 .hvr-trim:before {
-  content: 'ih-business-pro';
+  content: 'blain';
   position: absolute;
   border: white solid 4px;
   top: 4px;
@@ -2262,7 +2262,7 @@
   position: relative;
 }
 .hvr-ripple-out:before {
-  content: 'ih-business-pro';
+  content: 'blain';
   position: absolute;
   border: #e1e1e1 solid 6px;
   top: 0;
@@ -2310,7 +2310,7 @@
   position: relative;
 }
 .hvr-ripple-in:before {
-  content: 'ih-business-pro';
+  content: 'blain';
   position: absolute;
   border: #e1e1e1 solid 4px;
   top: -12px;
@@ -2339,7 +2339,7 @@
   position: relative;
 }
 .hvr-outline-out:before {
-  content: 'ih-business-pro';
+  content: 'blain';
   position: absolute;
   border: #e1e1e1 solid 4px;
   top: 0;
@@ -2372,7 +2372,7 @@
 }
 .hvr-outline-in:before {
   pointer-events: none;
-  content: 'ih-business-pro';
+  content: 'blain';
   position: absolute;
   border: #e1e1e1 solid 4px;
   top: -16px;
@@ -2842,7 +2842,7 @@
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   top: 100%;
   left: 5%;
   height: 10px;
@@ -2883,7 +2883,7 @@
 .hvr-shadow-radial:before, .hvr-shadow-radial:after {
   pointer-events: none;
   position: absolute;
-  content: 'ih-business-pro';
+  content: 'blain';
   left: 0;
   width: 100%;
   box-sizing: border-box;
@@ -2926,7 +2926,7 @@
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   border-style: solid;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -2958,7 +2958,7 @@
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   border-style: solid;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -2990,7 +2990,7 @@
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   border-style: solid;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -3022,7 +3022,7 @@
   pointer-events: none;
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   border-style: solid;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
@@ -3057,7 +3057,7 @@
 .hvr-bubble-float-top:before {
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   left: calc(50% - 10px);
   top: 0;
   border-style: solid;
@@ -3098,7 +3098,7 @@
   z-index: -1;
   top: calc(50% - 10px);
   right: 0;
-  content: 'ih-business-pro';
+  content: 'blain';
   border-style: solid;
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent #e1e1e1;
@@ -3135,7 +3135,7 @@
 .hvr-bubble-float-bottom:before {
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   left: calc(50% - 10px);
   bottom: 0;
   border-style: solid;
@@ -3174,7 +3174,7 @@
 .hvr-bubble-float-left:before {
   position: absolute;
   z-index: -1;
-  content: 'ih-business-pro';
+  content: 'blain';
   top: calc(50% - 10px);
   left: 0;
   border-style: solid;
@@ -4754,7 +4754,7 @@
 .hvr-curl-top-left:before {
   pointer-events: none;
   position: absolute;
-  content: 'ih-business-pro';
+  content: 'blain';
   height: 0;
   width: 0;
   top: 0;
@@ -4791,7 +4791,7 @@
 .hvr-curl-top-right:before {
   pointer-events: none;
   position: absolute;
-  content: 'ih-business-pro';
+  content: 'blain';
   height: 0;
   width: 0;
   top: 0;
@@ -4825,7 +4825,7 @@
 .hvr-curl-bottom-right:before {
   pointer-events: none;
   position: absolute;
-  content: 'ih-business-pro';
+  content: 'blain';
   height: 0;
   width: 0;
   bottom: 0;
@@ -4859,7 +4859,7 @@
 .hvr-curl-bottom-left:before {
   pointer-events: none;
   position: absolute;
-  content: 'ih-business-pro';
+  content: 'blain';
   height: 0;
   width: 0;
   bottom: 0;
