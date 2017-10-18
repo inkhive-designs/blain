@@ -10,13 +10,14 @@
                     <?php if (get_theme_mod('blain_mailid')) : ?>
                     <div class="icon">
                         <span class="fa fa-envelope"></span>
-                        <span class="value"><?php echo get_theme_mod('blain_mailid'); ?></span>
+                         <span class="value"><a href="mailto:<?php echo get_theme_mod('blain_mailid'); ?>"> <?php echo get_theme_mod('blain_mailid');?></a></span>
                     </div>
                     <?php endif; ?>
                     <?php if (get_theme_mod('blain_phone')) : ?>
                     <div class="icon">
                         <span class="fa fa-phone"></span>
-                        <span class="value"><?php echo get_theme_mod('blain_phone'); ?></span>
+                        <span class="value"><a href="tel:<?php echo get_theme_mod('blain_phone'); ?>">
+                            <?php echo get_theme_mod('blain_phone'); ?><a></span>
                     </div>
                     <?php endif; ?>
                 </div>

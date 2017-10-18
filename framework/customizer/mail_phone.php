@@ -15,7 +15,7 @@ function blain_customize_register_header_mail( $wp_customize ) {
 		'label' => __('Your Email','blain'),
 		'section' => 'blain_mail',
 		'settings' => 'blain_mailid',
-		'type' => 'text',
+		'type' => 'email',
 	) );
 	
 	$wp_customize->add_setting( 'blain_phone' , array(
@@ -27,7 +27,7 @@ function blain_customize_register_header_mail( $wp_customize ) {
 		'label' => __('Your Phone No.','blain'),
 		'section' => 'blain_mail',
 		'settings' => 'blain_phone',
-		'type' => 'text',
+		'type' => 'tel',
 	) );
 	
 }

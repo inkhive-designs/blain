@@ -1,13 +1,15 @@
+<?php if(get_theme_mod('blain_featured_point_enable')):?>
 <div id="featured-point">
     <div class="container">
         <?php if ( get_theme_mod('blain_featured_point_enable') && is_front_page() ) : ?>
             <div class="popular-articles col-md-12">
                 <?php if(get_theme_mod('blain_featured_point_title')):?>
                     <div class="section-title">
-                        <span><?php echo get_theme_mod('blain_featured_point_title',__('Popular Articles','blain')); ?></span>
+                        <span><?php echo esc_html(get_theme_mod('blain_featured_point_title',__('Popular Articles','blain'))); ?></span>
                     </div>
+                    <div id="curve"></div>
                 <?php endif;?>
-                <div id="curve"></div>
+
                 <?php /* Start the Loop */ $count=0; ?>
                 <?php
                 $args = array( 'posts_per_page' => 3, 'category' => get_theme_mod('blain_featured_point_cat') );
@@ -38,3 +40,4 @@
         <?php endif; ?>
     </div><!--.container-->
 </div>
+<?php endif;?>

@@ -26,7 +26,7 @@
                 <?php endif; ?>
                 <?php if ( get_theme_mod('blain_static_page_button') != '') : ?>
                     <a href="<?php the_permalink(get_theme_mod('blain_static_page_selectpage')); ?>" class="more-button">
-                        <?php echo get_theme_mod('blain_static_page_button'); ?>
+                        <?php echo esc_html(get_theme_mod('blain_static_page_button')); ?>
                     </a>
                 <?php endif; ?>
             </div>

@@ -104,7 +104,12 @@ function blain_custom_css_mods() {
         $custom_css .= ".showcase-item4_img{ 
                 background-image: url('".get_theme_mod('blain_fshowcase4_image')."') !important;
               height: 488px;
-               }";
+               }
+               @media screen and (min-width: 767px) and (max-width: 991px) {
+               .showcase-item4_img{
+                    height: 244px !important;
+                    }
+              }";
     endif;
 
     //footer background images
@@ -226,7 +231,20 @@ function blain_custom_css_mods() {
         $custom_css .=".mega-container {margin-top: 300px !important;}";
     endif;
 
-	wp_add_inline_style( '-main-theme-style', wp_strip_all_tags($custom_css) );
+    // hero image for single page
+    if(!is_home() && !is_front_page() ):
+        $custom_css .="#hero {min-height: 300px !important;}
+                        .social-wrapper::after{ display:none;}
+                        .mega-container{ margin-top:200px !important;}
+                        .social-wrapper {padding: 20px !important;}
+                        .social-wrapper .social-inner a{ font-size:18px !important;}
+                        #searchicon{ top: 30px !important;}";
+    endif;
+
+
+
+
+    wp_add_inline_style( '-main-theme-style', wp_strip_all_tags($custom_css) );
 	
 }
 

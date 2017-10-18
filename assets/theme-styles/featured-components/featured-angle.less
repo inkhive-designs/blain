@@ -44,7 +44,7 @@
 
       &:after{
         width: 100%;
-        top: 650px;
+        top: 580px;
         border-left: solid 674px @onaccent;
         /* border-bottom: solid 345px transparent; */
         border-top: solid 117px lighten(@content, 40%);
@@ -73,20 +73,23 @@
     text-align: center;
     padding: 0px;
     cursor: pointer;
+    .transition(5s all ease;);
     &:hover {
       .titledesc{
+        .transition(2s all ease;);
         opacity: 0.8;
         top:0;
         bottom: 0;
         position: absolute;
-        .transition(2s all ease;);
+        img {
+          filter: brightness(0.5);
+          -webkit-filter: brightness(0.5);
+          .transform(scale(1));
+        }
       }
-      img {
-        filter: brightness(0.5);
-        -webkit-filter: brightness(0.5);
-        .transform(scale(1));
-      }
+
     }
+
     @media screen and (max-width: 768px){
 
         .titledesc {
@@ -94,8 +97,11 @@
           top: 0;
           bottom: 0;
           position: absolute;
+          right: 0;
+          transform: none;
         }
         img {
+          width: 100%;
           filter: brightness(0.5);
           -webkit-filter: brightness(0.5);
         }
@@ -110,8 +116,21 @@
     z-index: 0;
     width: 100%;
     //bottom: 25px;
-    left: 5px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateY(100px);
     opacity: 0;
+    @media screen and (max-width: 1363px){
+        transform: none;
+      transform: translateY(0px);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+    }
     a {
       color: @onaccent;
       font-size: 20px;
@@ -136,26 +155,6 @@
         font-size: 14px;
       }
 
-    }
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      width: auto;
-      background: @accent;
-      //padding-bottom: 10px;
-      //padding-top: 5px;
-      a {
-        font-size: 16px;
-        padding: 0;
-        background: none;
-      }
-      p{
-        font-size: 14px;
-      }
-      h2 {
-        line-height: 10px;
-      }
     }
     h2 {
       margin: 0;

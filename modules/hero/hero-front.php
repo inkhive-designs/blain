@@ -5,14 +5,17 @@
 		<div class="container">
             <?php get_template_part('modules/navigation/primary-mobile','menu');?>
 			<?php if (get_theme_mod('blain_heading')) : ?>
-			<h2 class="hero-title"><?php echo get_theme_mod('blain_heading') ?></h2>
+			<h2 class="hero-title">
+                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                    <?php echo esc_html(get_theme_mod('blain_heading')) ?></a></h2>
 			<?php endif; ?>
-
-			<?php if (get_theme_mod('blain_btn')) : ?>
+        <?php if(is_home() && is_front_page()):?>
+            <?php if (get_theme_mod('blain_btn')) : ?>
 			<div class="hero-button-wrapper">
-				<a class="hero-button hvr-icon-wobble-horizontal" href="<?php echo get_theme_mod('blain_h_url') ?>"><?php echo get_theme_mod('blain_btn') ?></a>
+				<a class="hero-button hvr-icon-wobble-horizontal" href="<?php echo esc_url(get_theme_mod('blain_h_url')) ?>"><?php echo esc_html(get_theme_mod('blain_btn')) ?></a>
             </div>
 			<?php endif; ?>
+        <?php endif;?>
 		</div>
 
             <span id="searchicon" class="fa fa-search"></span>

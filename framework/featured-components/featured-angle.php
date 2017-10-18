@@ -1,10 +1,11 @@
+<?php if(get_theme_mod('blain_featured_angle_enable')):?>
 <div id="featured-angle">
     <div class="container">
     <?php if ( get_theme_mod('blain_featured_angle_enable',true) && is_front_page() ) : ?>
             <div class="popular-articles col-md-12">
                 <?php if(get_theme_mod('blain_featured_angle_title')):?>
                     <div class="section-title">
-                        <span><?php echo get_theme_mod('blain_featured_angle_title',__('Popular Articles','blain')); ?></span>
+                        <span><?php echo esc_html(get_theme_mod('blain_featured_angle_title',__('Popular Articles','blain'))); ?></span>
                     </div>
                 <?php endif;?>
                 <div class="container">
@@ -46,3 +47,4 @@
         <?php endif; ?>
 </div>
 </div>
+<?php endif;?>
