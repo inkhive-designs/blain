@@ -152,7 +152,7 @@ function blain_custom_css_mods() {
                             border-left: solid 674px #dddddd;
                             border-bottom: solid 90px transparent;
                             content: \"\";
-                            top: 140px;
+                            top: 115px;
                             background: transparent;
                             position: absolute;
                             left: 0px;
@@ -175,7 +175,7 @@ function blain_custom_css_mods() {
                             border-left: solid 674px #dddddd;
                             border-bottom: solid 90px transparent;
                             content: \"\";
-                            top: 140px;
+                            top: 115px;
                             background: transparent;
                             position: absolute;
                             left: 0px;
@@ -204,16 +204,16 @@ function blain_custom_css_mods() {
         $custom_css .="#static_page .static_page-container{margin-top: 0px !important;}";
     endif;
 
-    if(get_theme_mod('blain_featured_angle_enable')&& get_theme_mod('blain_featured_point_enable')):
-        $custom_css .="#featured-point {margin-bottom: 200px;}";
-    endif;
-
     if((get_theme_mod('blain_featured_angle_enable')|| get_theme_mod('blain_featured_point_enable'))||get_theme_mod('blain_static_page_enable')):
         $custom_css .=".mega-container{margin-top: 100px;}";
     endif;
 
     if((get_theme_mod('blain_featured_angle_enable')&& get_theme_mod('blain_showcase_enable_set'))&& !get_theme_mod('blain_featured_point_enable')):
-        $custom_css .="#showcase-z {margin-bottom: 207px !important;}";
+        $custom_css .="#showcase-z {margin-bottom: 207px !important;}
+                        #featured-angle .popular-articles::before{
+                            border-left: solid 674px #ffffff !important;
+                            border-right: solid 675px #ffffff !important;
+                        }";
     endif;
 
     if((!get_theme_mod('blain_featured_angle_enable')&& !get_theme_mod('blain_static_page_enable'))&&
@@ -231,6 +231,40 @@ function blain_custom_css_mods() {
         $custom_css .=".mega-container {margin-top: 300px !important;}";
     endif;
 
+    if(get_theme_mod('blain_featured_angle_enable')&& get_theme_mod('blain_featured_point_enable')):
+        $custom_css .="@media screen and (min-width: 1363px) {
+        #featured-point {margin-bottom: 200px !important;}}";
+    endif;
+
+
+    if((get_theme_mod('blain_featured_angle_enable')&& get_theme_mod('blain_social_enable'))
+        && (!get_theme_mod('blain_featured_point_enable')&& !get_theme_mod('blain_showcase_enable_set'))):
+        $custom_css .="@media screen and (min-width: 1363px){#featured-angle .popular-articles::before{display:none;}
+                        #featured-angle{ margin-top:10px;}
+                        .social-wrapper::after{ display:none;}}";
+    endif;
+
+    if((!get_theme_mod('blain_featured_angle_enable')&& get_theme_mod('blain_social_enable'))
+        && (!get_theme_mod('blain_featured_point_enable')&& !get_theme_mod('blain_showcase_enable_set'))):
+
+        $custom_css .="@media screen and (min-width: 1363px) {.mega-container{ margin-top: 200px !important}
+                        #static_page{ margin-top: 200px !important}";
+
+    endif;
+    if((get_theme_mod('blain_static_page_enable')&& get_theme_mod('blain_social_enable'))
+        && (!get_theme_mod('blain_featured_point_enable')&& !get_theme_mod('blain_showcase_enable_set'))
+        && (!get_theme_mod('blain_featured_angle_enable'))):
+        $custom_css .=".mega-container{ margin-top: 0px !important}";
+    endif;
+
+
+
+
+    if((get_theme_mod('blain_static_page_enable')&& get_theme_mod('blain_social_enable'))
+        && (get_theme_mod('blain_featured_point_enable')&& !get_theme_mod('blain_showcase_enable_set'))
+        && (!get_theme_mod('blain_featured_angle_enable'))):
+        $custom_css .="#static_page{ margin-top: 100px !important}";
+    endif;
     // hero image for single page
     if(!is_home() && !is_front_page() ):
         $custom_css .="#hero {min-height: 300px !important;}

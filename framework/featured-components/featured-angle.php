@@ -17,9 +17,8 @@
                 $lastposts = get_posts( $args );
                 foreach ( $lastposts as $post ) :
                     setup_postdata( $post ); ?>
-
+                <a href="<?php the_permalink()?>">
                     <div class="col-md-4 col-sm-4 col-xs-12 imgcontainer">
-                        <a href="<?php the_permalink()?>">
                             <div class="popimage">
                                 <?php if (has_post_thumbnail()) : ?>
                                     <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail('blain-thumb'); ?></a>
@@ -34,8 +33,8 @@
                                 <?php echo substr(get_the_excerpt(),0,400).(get_the_excerpt() ? "..." : "" ); ?>
                             </p>
                             </div>
-                        </a>
                     </div>
+                </a>
 
                     <?php $count++;
                     if ($count == 4) break;

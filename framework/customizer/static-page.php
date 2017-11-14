@@ -17,7 +17,7 @@ $wp_customize->add_control('blain_static_page_enable',
     array(
         'setting' => 'blain_static_page_enable',
         'section' => 'blain_static_page_section',
-        'label' => __('Enable static_page', 'blain'),
+        'label' => __('Enable Static Page', 'blain'),
         'type' => 'checkbox',
         'default' => false,
     )

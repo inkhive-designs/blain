@@ -9,7 +9,10 @@ body {
 	background: @background;
 	max-width: 1170px;
 	margin: auto;
-	margin-top: 150px;
+	@media screen and (max-width: 767px) {
+		margin-top: 0px !important;
+	}
+	//margin-top: 150px;
 	overflow: visible;
 	clear: both;
 	//margin-bottom: 100px;
