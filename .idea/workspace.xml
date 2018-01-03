@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb434478-9509-4906-9fe4-872ccb987efe" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/theme-styles/css/aquamarine.css" afterPath="$PROJECT_DIR$/assets/theme-styles/css/aquamarine.css" />
-      <change beforePath="$PROJECT_DIR$/assets/theme-styles/css/brown.css" afterPath="$PROJECT_DIR$/assets/theme-styles/css/brown.css" />
-      <change beforePath="$PROJECT_DIR$/assets/theme-styles/css/crimson.css" afterPath="$PROJECT_DIR$/assets/theme-styles/css/crimson.css" />
-      <change beforePath="$PROJECT_DIR$/assets/theme-styles/skins/aquamarine.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/theme-styles/skins/brown.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/assets/theme-styles/skins/crimson.css" afterPath="" />
-    </list>
+    <list default="true" id="cb434478-9509-4906-9fe4-872ccb987efe" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -155,24 +147,6 @@
               <item name="blain" type="b2602c69:ProjectViewProjectNode" />
               <item name="blain" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="blain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blain" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blain" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="theme-styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="blain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blain" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="theme-styles" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="skins" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -282,13 +256,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35659000" />
+    <option name="totallyTimeSpent" value="35896000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
