@@ -1,7 +1,7 @@
 <?php if(get_theme_mod('blain_featured_angle_enable')):?>
 <div id="featured-angle">
     <div class="container">
-    <?php if ( get_theme_mod('blain_featured_angle_enable',true) && is_front_page() ) : ?>
+    <?php if ( get_theme_mod('blain_featured_angle_enable',true) || is_front_page() ) : ?>
             <div class="popular-articles col-md-12">
                 <?php if(get_theme_mod('blain_featured_angle_title')):?>
                     <div class="section-title">
@@ -17,25 +17,23 @@
                 $lastposts = get_posts( $args );
                 foreach ( $lastposts as $post ) :
                     setup_postdata( $post ); ?>
-                <a href="<?php the_permalink()?>">
+                <a href="<?php the_permalink()?>" title="<?php the_title() ?>">
                     <div class="col-md-4 col-sm-4 col-xs-12 imgcontainer">
                             <div class="popimage">
                                 <?php if (has_post_thumbnail()) : ?>
-                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><?php the_post_thumbnail('blain-thumb'); ?></a>
+                                    <a href="<?php the_permalink()?>" title="<?php the_title() ?>"><?php the_post_thumbnail('blain-thumb',array(  'alt' => trim(strip_tags( $post->post_title )))); ?></a>
                                 <?php else : ?>
-                                    <a href="<?php the_permalink() ?>" title="<?php the_title() ?>"><img src="<?php echo get_template_directory_uri()."/assets/images/placeholder2.jpg"; ?>"></a>
+                                    <a href="<?php the_permalink()?>" title="<?php the_title() ?>"><img alt="<?php the_title() ?>" src="<?php echo esc_html(get_template_directory_uri()."/assets/images/placeholder2.jpg"); ?>"></a>
                                 <?php endif; ?>
                             </div>
                             <div class="titledesc">
-                                <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
-
+                                <h3><a href="<?php the_permalink()?>" title="<?php the_title() ?>"><?php the_title(); ?></a></h3>
                             <p class="description">
-                                <?php echo substr(get_the_excerpt(),0,400).(get_the_excerpt() ? "..." : "" ); ?>
+                                <?php echo esc_html(substr(get_the_excerpt(),0,400).(get_the_excerpt() ? "..." : "" )); ?>
                             </p>
                             </div>
                     </div>
                 </a>
-
                     <?php $count++;
                     if ($count == 4) break;
                 endforeach;

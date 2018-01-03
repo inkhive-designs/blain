@@ -8,7 +8,8 @@
 <div id="showcase-z" class="featured-section-area">
     <div class="container">
         <?php if(get_theme_mod('blain_showcase_title')):?>
-            <?php blain_section_title(get_theme_mod('blain_showcase_title')); ?>
+            <?php blain_section_title(
+                    get_theme_mod('blain_showcase_title')); ?>
         <?php endif;?>
         <div id="curve"></div>
         <div class="showcase-wrapper">

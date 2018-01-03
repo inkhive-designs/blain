@@ -246,6 +246,11 @@ function blain_custom_css_mods() {
 
     if((!get_theme_mod('blain_featured_angle_enable')&& get_theme_mod('blain_social_enable'))
         && (!get_theme_mod('blain_featured_point_enable')&& !get_theme_mod('blain_showcase_enable_set'))):
+        $custom_css .=".social-wrapper::after{ display:none;}";
+    endif;
+
+    if((!get_theme_mod('blain_featured_angle_enable')&& get_theme_mod('blain_social_enable'))
+        && (!get_theme_mod('blain_featured_point_enable')&& !get_theme_mod('blain_showcase_enable_set'))):
 
         $custom_css .="@media screen and (min-width: 1363px) {.mega-container{ margin-top: 200px !important}
                         #static_page{ margin-top: 200px !important}";
@@ -257,7 +262,9 @@ function blain_custom_css_mods() {
         $custom_css .=".mega-container{ margin-top: 0px !important}";
     endif;
 
-
+    if(is_home() && is_front_page()):
+        $custom_css .=".mega-container{ margin-top: 150px !important}";
+    endif;
 
 
     if((get_theme_mod('blain_static_page_enable')&& get_theme_mod('blain_social_enable'))
@@ -272,12 +279,30 @@ function blain_custom_css_mods() {
                         .mega-container{ margin-top:200px !important;}
                         .social-wrapper {padding: 20px !important;}
                         .social-wrapper .social-inner a{ font-size:18px !important;}
-                        #searchicon{ top: 30px !important;}";
+                        #searchicon{ top: 10px !important;}";
     endif;
 
 
 
+//sidebar layout
+    //disable on home
+    if(is_home() && get_theme_mod('blain_disable_sidebar_home','false')):
+        $custom_css .= ".home #secondary{ display:none}
+                        .home #primary{ width:100%}";
+        endif;
 
+    //disable on front page
+    if(is_front_page() && get_theme_mod('blain_disable_sidebar_front','false')):
+        $custom_css .= "body.page-template-default #secondary{ display:none}
+                        body.page-template-default #primary-mono{ width:100%}";
+    endif;
+    //disable anywhere
+    if(get_theme_mod('blain_disable_sidebar','false')):
+        $custom_css .= "#secondary{ display:none}
+                        #primary{ width:100%}
+                        #primary-mono{ width:100%}";
+
+    endif;
     wp_add_inline_style( '-main-theme-style', wp_strip_all_tags($custom_css) );
 	
 }

@@ -66,7 +66,7 @@ function blain_customize_register_layouts( $wp_customize ) {
 		    'label'    => __( 'Disable Sidebar Everywhere.','blain' ),
 		    'section'  => 'blain_sidebar_options',
 		    'type'     => 'checkbox',
-		    'default'  => false
+		    'default'  => true
 		)
 	);
 	
@@ -82,7 +82,7 @@ function blain_customize_register_layouts( $wp_customize ) {
 		    'section'  => 'blain_sidebar_options',
 		    'type'     => 'checkbox',
 		    'active_callback' => 'blain_show_sidebar_options',
-		    'default'  => false
+		    'default'  => true
 		)
 	);
 	
@@ -98,7 +98,7 @@ function blain_customize_register_layouts( $wp_customize ) {
 		    'section'  => 'blain_sidebar_options',
 		    'type'     => 'checkbox',
 		    'active_callback' => 'blain_show_sidebar_options',
-		    'default'  => false
+		    'default'  => true
 		)
 	);
 	

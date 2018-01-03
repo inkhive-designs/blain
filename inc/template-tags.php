@@ -72,13 +72,13 @@ function blain_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ' ', 'blain' ) );
 		if ( $categories_list && blain_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( '<span class="cat-title">Categories</span> %1$s', 'blain' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . esc_html__( '<span class="cat-title">Categories</span> %1$s', 'blain' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ' ', 'blain' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( '<span class="tag-title">Tags</span> %1$s', 'blain' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . esc_html__( '<span class="tag-title">Tags</span> %1$s', 'blain' ) . '</span>', $tags_list );
 		}
 	}
 
@@ -134,7 +134,7 @@ function blain_comment( $comment, $args, $depth ) {
 
 	<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 		<div class="comment-body">
-			<?php _e( 'Pingback:', 'blain' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'blain' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php esc_html_e( 'Pingback:', 'blain' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'blain' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>
 
 	<?php else : ?>
@@ -155,7 +155,7 @@ function blain_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'blain' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'blain' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 

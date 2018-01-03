@@ -15,7 +15,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-areas <?php do_action('blain_primary-width') ?>">
 		<?php if ( is_home() ) : ?>
-			<div class="section-title"><span><?php _e("From the Blog",'blain'); ?></span></div>
+			<div class="section-title"><span><?php esc_html_e("From the Blog",'blain'); ?></span></div>
             <div id="curve"></div>
             <?php
 		endif; ?>

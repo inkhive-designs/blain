@@ -20,11 +20,11 @@ require get_template_directory() . '/framework/admin_modules/section_titles.php'
 function blain_load_sidebar() {
 	$load_sidebar = true;
 	if ( get_theme_mod('blain_disable_sidebar') ) :
-		$load_sidebar = false;
-	elseif( get_theme_mod('blain_disable_sidebar_home',true) && is_home() )	:
-		$load_sidebar = false;
-	elseif( get_theme_mod('blain_disable_sidebar_front',true) && is_front_page() ) :
-		$load_sidebar = false;
+		$load_sidebar = true;
+	elseif( get_theme_mod('blain_disable_sidebar_home',true))	:
+		$load_sidebar = true;
+	elseif( get_theme_mod('blain_disable_sidebar_front',true) ) :
+		$load_sidebar = true;
 	endif;
 	
 	return  $load_sidebar;

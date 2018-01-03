@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<section id="primary" class="<?php do_action('blain_primary-width') ?> content-area">
 		<header class="page-header">
-			<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'blain' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'blain' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		</header><!-- .page-header -->
 			
 		<main id="main" class="site-main <?php do_action('blain_masonry_class') ?>" role="main">

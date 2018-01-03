@@ -17,7 +17,7 @@ get_template_part('modules/header/head'); ?>
     <?php  get_template_part('modules/header/jumbosearch');?>
     <?php get_template_part('modules/header/social-icons');?>
 
-    <?php if(is_front_page() && is_home()):
+    <?php if(is_front_page() || is_home()):
         get_template_part('framework/featured-components/z-showcase' );
         get_template_part('framework/featured-components/featured','point' );
         get_template_part('framework/featured-components/featured','angle' );
