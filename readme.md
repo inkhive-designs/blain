@@ -4,7 +4,7 @@
 **Requires at least:** WordPress 4.4  
 **Tested up to:** WordPress 4.9.2  
 **Stable tag:** 1.1.1 
-**Version:** 1.3.1
+**Version:** 1.3.2
 **License:** GPL v3  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
 **Tags:** custom-background, two-columns, one-column, custom-colors, flexible-header, theme-options, right-sidebar, grid-layout, custom-menu, threaded-comments, translation-ready, featured-images, blog, full-width-template, e-commerce, footer-widgets, entertainment
@@ -57,5 +57,11 @@ Image 3:
 Url:https://www.pexels.com/photo/active-activity-adult-adventure-386140/
 
 Version: 1.3.1
+==============
 Redesign Theme.
+
+Version: 1.3.2
+==============
+Featured area and Static Page bug fixed.
+
 
