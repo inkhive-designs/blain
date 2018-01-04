@@ -1,8 +1,6 @@
 /*Featured Area Skew */
 #featured-point {
-  @media screen and (min-width: 1363px) {
-    margin-top: 100px;
-  }
+  margin-top: 200px;
   .container{
     overflow: hidden;
   }
@@ -30,11 +28,11 @@
   }
   .popimage {
     perspective: 50;
-    box-shadow: fade(#444, 50%) 3px 3px 3px;
+    box-shadow: fade(#444,50%) 3px 3px 3px;
     -webkit-perspective: 50;
-    .transform(perspective(1300px) skewY(5deg));
-    @media screen and (min-width: 767px) {
-      .transform(perspective(1300px) rotateY(0deg));
+    .transform(perspective(1300px) skewY(5deg) );
+    @media screen and (max-width: 767px) {
+      .transform(perspective(1300px) rotateY(0deg) );
     }
     transform-origin: left;
     .transition(1s all ease);
@@ -44,10 +42,9 @@
       .transform(scale(1.1));
       .transition(2s all ease);
     }
-    @media screen and (min-width: 767px){
     &:hover {
-      .transform(perspective(1300px) rotateY(0deg));
-      box-shadow: fade(#444, 50%) 1px 1px 1px;
+      .transform(perspective(1300px) rotateY(0deg) );
+      box-shadow: fade(#444,50%) 1px 1px 1px;
       img {
         filter: brightness(0.5);
         -webkit-filter: brightness(0.5);
@@ -57,7 +54,6 @@
         opacity: 1;
       }
     }
-  }
   }
   .titledesc {
     position: absolute;
