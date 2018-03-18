@@ -8,7 +8,7 @@
 	margin-top: 30px;
 	.footer-inner{
 		position: relative;
-		padding-top: 150px;
+		padding-top: 50px;
 	}
 
 	#footer-bar {
@@ -258,40 +258,4 @@
 		color: #fff;
 		text-decoration: underline;
 	}
-}
-
-//footer-before
-.footer-inner{
-	&:before{
-		width: 100%;
-		border-left: solid 674px transparent;
-		border-top: solid 90px @background;
-		//opacity: 0.9;
-		content: "";
-		top: 0px;
-		background: transparent;
-		position: absolute;
-		left: 0px;
-		transform: rotate(0deg);
-		-webkit-transform: rotate(0deg);
-		-moz-transform: rotate(0deg);
-		-ms-transform: rotate(0deg);
-		-o-transform: rotate(0deg);
-		-webkit-transform-origin: left bottom;
-		-ms-transform-origin: left bottom;
-		transform-origin: left bottom;
-		border-right: solid 675px transparent;
-		z-index: 7;
-	}
-	@media screen and (max-width: 1363px) {
-			padding-top: 50px !important;
-		&:before {
-			display: none;
-		}
-
-		&:after {
-			display: none;
-		}
-	}
-
 }

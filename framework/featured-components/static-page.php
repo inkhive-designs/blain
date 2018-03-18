@@ -34,9 +34,10 @@
             <?php if(wp_get_attachment_url( get_post_thumbnail_id(get_theme_mod('blain_static_page_selectpage')) )):?>
                 <div class="f-image col-md-4 col-sm-4">
                     <?php $a =  wp_get_attachment_url( get_post_thumbnail_id(get_theme_mod('blain_static_page_selectpage')) ); ?>
-                    <href="<?php the_permalink(get_theme_mod('blain_static_page_selectpage')); ?>"><img alt="<?php the_title()?>" src="<?php echo $a; ?>"></a>
+                    <a href="<?php the_permalink(get_theme_mod('blain_static_page_selectpage')); ?>"><img alt="<?php the_title()?>" src="<?php echo $a; ?>"></a>
                 </div>
             <?php endif;?>
+		</div>
     </div>
 <?php endif; ?>
 <!--front page builder end-->

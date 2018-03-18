@@ -72,13 +72,13 @@ function blain_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ' ', 'blain' ) );
 		if ( $categories_list && blain_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( '<span class="cat-title">Categories</span> %1$s', 'blain' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links">' . __( '<span class="cat-title">Categories</span> %1$s', 'blain' ) . '</span>', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ' ', 'blain' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( '<span class="tag-title">Tags</span> %1$s', 'blain' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links">' . __( '<span class="tag-title">Tags</span> %1$s', 'blain' ) . '</span>', $tags_list );
 		}
 	}
 

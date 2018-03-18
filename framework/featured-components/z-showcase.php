@@ -14,11 +14,9 @@
         <div id="curve"></div>
         <div class="showcase-wrapper">
             <div class="col-md-8 sec-left">
-                <div class="1">
-                <a href="<?php echo esc_html(get_theme_mod('blain_showcase_url1')); ?>" title="<?php echo esc_html(get_theme_mod('blain_showcase_title1')." - ".get_theme_mod('blain_showcase_desc1')) ?>">
-                    <div class="showcase-item1_img col-md-6 col-sm-6 col-xs-12">
-
-                    </div>
+                <div class="showcase-item-wrapper-h">
+	                <a href="<?php echo esc_html(get_theme_mod('blain_showcase_url1')); ?>" title="<?php echo esc_html(get_theme_mod('blain_showcase_title1')." - ".get_theme_mod('blain_showcase_desc1')) ?>">
+                    <div class="showcase-item1_img col-md-6 col-sm-6 col-xs-12"></div>
                 </a>
                 <div class="showcase-item1 hvr-rectangle-out col-md-6 col-sm-6 col-xs-12">
                     <div class="showcase-caption">
@@ -30,15 +28,12 @@
                         <?php endif; ?>
                     </div>
                 </div>
-                </div>
+            </div>
+                
                 <!---->
-
-                <!---->
-                <div class="1">
-                <a href="<?php echo esc_html(get_theme_mod('blain_showcase_url2')); ?>" title="<?php echo esc_html(get_theme_mod('blain_showcase_title2')." - ".get_theme_mod('blain_showcase_desc2')) ?>">
-                    <div class="showcase-item2_img col-md-6 col-sm-6 col-xs-12">
-
-                    </div>
+                <div class="showcase-item-wrapper-h">
+                 <a href="<?php echo esc_html(get_theme_mod('blain_showcase_url2')); ?>" title="<?php echo esc_html(get_theme_mod('blain_showcase_title2')." - ".get_theme_mod('blain_showcase_desc2')) ?>">
+                   <div class="showcase-item2_img col-md-6 col-sm-6 col-xs-12"></div>
                 </a>
 
                 <div class="showcase-item2 hvr-rectangle-out col-md-6 col-sm-6 col-xs-12">
@@ -54,11 +49,9 @@
                 </div>
 
                 <!---->
-                <div class="1">
+                <div class="showcase-item-wrapper-h">
                 <a href="<?php echo esc_html(get_theme_mod('blain_showcase_url3')); ?>" title="<?php echo esc_html(get_theme_mod('blain_showcase_title3')." - ".get_theme_mod('blain_showcase_desc3')) ?>">
-                    <div class="showcase-item3_img col-md-6 col-sm-6 col-xs-12">
-
-                    </div>
+                    <div class="showcase-item3_img col-md-6 col-sm-6 col-xs-12"></div>
                 </a>
                 <div class="showcase-item3 hvr-rectangle-out col-md-6 col-sm-6 col-xs-12">
                     <div class="showcase-caption">
@@ -74,12 +67,9 @@
             </div>
 
             <!---->
-            <div class="1">
-            <div class="col-md-4 sec-right">
-                <a href="<?php echo esc_html(get_theme_mod('blain_showcase_url2')); ?>" title="<?php echo esc_html(get_theme_mod('blain_showcase_title4')." - ".get_theme_mod('blain_showcase_desc4')) ?>" >
-                    <div class="showcase-item4_img col-md-12 col-sm-6 col-xs-12">
-
-                    </div>
+            <div class="showcase-item-wrapper-l col-md-4 sec-right">
+	            <a href="<?php echo esc_html(get_theme_mod('blain_showcase_url4')); ?>" title="<?php echo esc_html(get_theme_mod('blain_showcase_title4')." - ".get_theme_mod('blain_showcase_desc4')) ?>">
+                    <div class="showcase-item4_img col-md-12 col-sm-6 col-xs-12"></div>
                 </a>
                 <div class="showcase-item4 hvr-rectangle-out col-md-12 col-sm-6 col-xs-12">
                     <div class="showcase-caption">
@@ -91,7 +81,6 @@
                         <?php endif; ?>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>

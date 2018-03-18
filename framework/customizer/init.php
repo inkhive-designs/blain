@@ -26,7 +26,6 @@ require_once get_template_directory().'/framework/customizer/_layouts.php';
 require_once get_template_directory().'/framework/customizer/_sanitization.php';
 require_once get_template_directory().'/framework/customizer/header.php';
 require_once get_template_directory().'/framework/customizer/mail_phone.php';
-require_once get_template_directory().'/framework/customizer/hero-text.php';
 require_once get_template_directory().'/framework/customizer/skins.php';
 require_once get_template_directory().'/framework/customizer/social-icons.php';
 require_once get_template_directory().'/framework/customizer/misc-scripts.php';
@@ -36,7 +35,7 @@ require_once get_template_directory().'/framework/customizer/misc-scripts.php';
  */
 function blain_customize_preview_js() {
 	if(is_customize_preview()) {
-		wp_enqueue_script( 'blain_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+		wp_enqueue_script( 'blain_customizer', get_template_directory_uri() . '/assets/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 	}	
 }
 add_action( 'customize_preview_init', 'blain_customize_preview_js' );

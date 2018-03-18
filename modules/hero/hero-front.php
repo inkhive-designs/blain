@@ -4,10 +4,15 @@
 		<div class="container">
             <?php get_template_part('modules/navigation/primary-mobile','menu');?>
 			<?php if (get_theme_mod('blain_heading')) : ?>
-			<h3 class="hero-title">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <?php echo esc_html(get_theme_mod('blain_heading')) ?></a></h3>
+				<h3 class="hero-title title-font">
+	                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+	                    <?php echo get_bloginfo('name') ?>
+	                </a>
+	            </h3>
 			<?php endif; ?>
+				<p class="hero-desc">
+					<?php echo get_bloginfo('description'); ?>
+				</p>
         <?php if(is_home() && is_front_page()):?>
             <?php if (get_theme_mod('blain_btn')) : ?>
 			<div class="hero-button-wrapper">

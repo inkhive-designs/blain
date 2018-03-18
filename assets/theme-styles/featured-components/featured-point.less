@@ -1,11 +1,23 @@
 /*Featured Area Skew */
 #featured-point {
-  margin-top: 200px;
+	margin-bottom: 100px;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	&:before{
+	  width: 100%;
+	  content: '';
+	  position: absolute;
+	  left: 0;
+	  bottom: 100%;
+	  border-top: solid 50px transparent;
+	  border-left: solid 50vw white;
+	  border-right: solid 50vw white;
+	  background: transparent;
+	  z-index: 7;
+  }
   .container{
     overflow: hidden;
-  }
-  @media screen and (max-width: 1363px) {
-    margin-bottom: 100px;
   }
   .popular-articles{
     margin-top: 40px;

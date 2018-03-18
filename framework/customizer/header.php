@@ -72,5 +72,29 @@ function blain_customize_register_header( $wp_customize ) {
 		'settings' => 'blain_himg_repeat',
 		'type' => 'checkbox',
 	) );
+	
+	$wp_customize->add_setting( 'blain_btn' , array(
+	    'sanitize_callback' => 'sanitize_text_field'
+	) );
+	
+	$wp_customize->add_control(
+	'blain_btn', array(
+		'label' => __('Button','blain'),
+		'section' => 'title_tagline',
+		'settings' => 'blain_btn',
+		'type' => 'text',
+	) );
+	
+	$wp_customize->add_setting( 'blain_h_url' , array(
+	    'sanitize_callback' => 'esc_url_raw'
+	) );
+	
+	$wp_customize->add_control(
+	'blain_h_url', array(
+		'label' => __('Button URL','blain'),
+		'section' => 'title_tagline',
+		'settings' => 'blain_h_url',
+		'type' => 'url',
+	) );
 }
 add_action( 'customize_register', 'blain_customize_register_header' );

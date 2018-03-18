@@ -1,74 +1,37 @@
 /*Featured Area Skew */
 #featured-angle {
-  cursor: pointer;
-  background: lighten(@content,40%);
-  @media screen and (min-width: 1363px) {
-    .container{
-      width: 100%;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
+  background: lighten(@content,45%);
+  position: relative;
+  display: inline-block;
+  width: 100%;
+     &:before{
+	  width: 100%;
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: 100%;
+	  border-bottom: solid 50px lighten(@content,45%);
+	  border-left: solid 50vw transparent;
+	  border-right: solid 50vw transparent;
+	  background: transparent;
+	  z-index: 7;
   }
 
+   &:after{
+	  width: 100%;
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  top: 100%;
+	  border-top: solid 50px lighten(@content,45%);
+	  border-left: solid 50vw transparent;
+	  border-right: solid 50vw transparent;
+	  background: transparent;
+	  z-index: 7;
+  }
   .popular-articles{
     padding: 0px;
     margin-bottom: 100px;
-
-
-    @media screen and (max-width: 1363px) {
-      &:before{display: none;}
-      &:after{ display:none;}
-      margin-bottom: 50px;
-      padding: 50px 0px;
-      overflow: hidden;
-    }
-    &:before{
-      width: 100%;
-      border-left: solid 674px transparent;
-      border-bottom: solid 90px lighten(@content,40%);
-      content: "";
-      top: -90px;
-      background: transparent;
-      position: absolute;
-      left: 0px;
-      transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      -webkit-transform-origin: left bottom;
-      -ms-transform-origin: left bottom;
-      transform-origin: left bottom;
-      border-right: solid 675px transparent;
-      z-index: 7;
-    }
-
-      &:after{
-        width: 100%;
-        top: 599px;
-        border-left: solid 674px @onaccent;
-        /* border-bottom: solid 345px transparent; */
-        border-top: solid 117px lighten(@content, 40%);
-        content: "";
-        //bottom: 0px;
-        background: transparent;
-        position: absolute;
-        left: 0px;
-        /* border-top: solid 17px #5b4a9b; */
-        /* border-bottom: solid 90px transparent; */
-        transform: rotate(0deg);
-        -webkit-transform: rotate(0deg);
-        -moz-transform: rotate(0deg);
-        -ms-transform: rotate(0deg);
-        -o-transform: rotate(0deg);
-        -webkit-transform-origin: left bottom;
-        -ms-transform-origin: left bottom;
-        transform-origin: left bottom;
-        border-right: solid 675px @onaccent;
-        z-index: 7;
-
-    }
-
   }
   .imgcontainer {
     text-align: center;
