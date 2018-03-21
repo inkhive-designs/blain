@@ -21,7 +21,7 @@ function blain_custom_css_mods() {
 	
 	
 	if ( get_theme_mod('blain_header_desccolor') ) :
-		$custom_css .= "#hero p.hero-desc { color: ".esc_html(get_theme_mod('blain_header_desccolor','#777'))."; }";
+		$custom_css .= "#hero p.hero-desc { color: ".esc_html(get_theme_mod('blain_header_desccolor','#ffffff'))."; }";
 	endif;
 	
 	

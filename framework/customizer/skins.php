@@ -7,8 +7,9 @@ function blain_customize_register_skins( $wp_customize ) {
 	//Replace Header Text Color with, separate colors for Title and Description
 	$wp_customize->get_control('header_textcolor')->label = __('Site Title Color','blain');
 	$wp_customize->get_control('header_textcolor')->section = 'colors';
+    $wp_customize->get_setting('header_textcolor')->default = "#ffffff";
 	$wp_customize->add_setting('blain_header_desccolor', array(
-	    'default'     => '#000',
+	    'default'     => '#ffffff',
 	    'sanitize_callback' => 'sanitize_hex_color',
 	));
 	

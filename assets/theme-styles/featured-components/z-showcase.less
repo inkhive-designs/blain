@@ -1,6 +1,6 @@
 #showcase-z {
   position: relative;
-  background: @accent;
+  background: lighten(@content,45%);
   z-index: 8;
   &:after{
 	  width: 100%;
@@ -8,15 +8,11 @@
 	  position: absolute;
 	  left: 0;
 	  top: 100%;
-	  border-top: solid 50px @accent;
+	  border-top: solid 50px lighten(@content,45%);
 	  border-left: solid 50vw transparent;
 	  border-right: solid 50vw transparent;
 	  background: transparent;
 	  z-index: 8;
-  }
-  .section-title span {
-	  color: white;
-	  text-shadow: 1px 1px 0px darken(@accent, 5%);
   }
   #curve:after {
 	  border-top-color: lighten(@accent, 15%);
@@ -79,7 +75,7 @@
       transform: translateY(30px);
       .showcase-title {
         font-weight: bold;
-        color: lighten(#0F2331, 20%);
+        color: white;
         font-size: 40px;
       }
       .showcase-desc {

@@ -4,7 +4,7 @@ function blain_customize_register_misc( $wp_customize ) {
 	    'blain_sec_upgrade',
 	    array(
 	        'title'     => __('Blain - Help & Support','blain'),
-	        'priority'  => 45,
+	        'priority'  => 1,
 	    )
 	);
 	

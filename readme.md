@@ -4,7 +4,7 @@
 **Requires at least:** WordPress 4.4  
 **Tested up to:** WordPress 4.9.2  
 **Stable tag:** 1.1.1 
-**Version:** 1.3.3
+**Version:** 1.3.4
 **License:** GPL v3  
 **License URI:** http://www.gnu.org/licenses/gpl-3.0.html  
 **Tags:** custom-background, two-columns, one-column, custom-colors, flexible-header, theme-options, right-sidebar, grid-layout, custom-menu, threaded-comments, translation-ready, featured-images, blog, full-width-template, e-commerce, footer-widgets, entertainment
@@ -67,5 +67,9 @@ Featured area and Static Page bug fixed.
 Version: 1.3.3
 ==============
 Featured Area minor bug fixed.
+
+Version 1.3.4
+==============
+All major bug fixed.
 
 
