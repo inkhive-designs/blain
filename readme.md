@@ -72,4 +72,12 @@ Version 1.3.4
 ==============
 All major bug fixed.
 
+Version 1.3.6
+==============
+
+i) Google Fonts major bug fixed.
+ii) Header Image Bug fixed.
+iii) Primary Menu minor bug fixed.
+
+
 

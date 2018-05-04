@@ -25,12 +25,20 @@
 function blain_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'blain_custom_header_args', array(
 		'default-text-color'     => '#000',
-		'default-image'			 => get_template_directory_uri()."/assets/images/header.jpg",
+		'default-image'			 => get_template_directory_uri()."/assets/images/blain-header.jpeg",
 		'width'  				 => 1920,
 		'height'				 => 667,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'blain_header_style',
 	) ) );
+    register_default_headers( array(
+            'default-image'    => array(
+                'url'            => '%s/assets/images/blain-header.jpeg',
+                'thumbnail_url'    => '%s/assets/images/blain-header.jpeg',
+                'description'    => __('Default Header Image', 'blain')
+            )
+        )
+    );
 }
 add_action( 'after_setup_theme', 'blain_custom_header_setup' );
 

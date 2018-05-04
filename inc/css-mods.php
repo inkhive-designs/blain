@@ -7,12 +7,12 @@ function blain_custom_css_mods() {
 
 	$custom_css = "";
 		
-	if ( get_theme_mod('blain_title_font','Ovo') ) :
-		$custom_css .= ".title-font, h1, h2 { font-family: ".esc_html(get_theme_mod('blain_title_font'))."; }";
+	if ( get_theme_mod('blain_title_font','Cinzel') ) :
+		$custom_css .= ".title-font, h1, h2 { font-family: ".esc_html(get_theme_mod('blain_title_font','Cinzel'))."; }";
 	endif;
 	
-	if ( get_theme_mod('blain_body_font','Quattrocento Pro') ) :
-		$custom_css .= "body { font-family: ".esc_html(get_theme_mod('blain_body_font'))."; }";
+	if ( get_theme_mod('blain_body_font','Playfair Display') ) :
+		$custom_css .= "body { font-family: ".esc_html(get_theme_mod('blain_body_font','Playfair Display'))."; }";
 	endif;
 	
 	if ( get_header_textcolor() ) :

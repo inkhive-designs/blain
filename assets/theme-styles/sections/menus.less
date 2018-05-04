@@ -27,7 +27,7 @@
     display: none;
   }
 }
-@media screen and (max-width: 1200px) and (min-width: 991px) {
+@media screen and (max-width: 1200px) and (min-width: 767px) {
   .menu-wrapper {
     .menu-left, .menu-right {
       display: none;
@@ -317,4 +317,32 @@
   background: darken(@background, 6%);
   padding: 10px;
   margin: 20px auto;
+}
+
+
+//00000000000000000000000
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .menu-wrapper {
+    .menu-center{
+      #center-menu {
+        display: inline-block;
+      }
+      margin-top: 0px;
+      #site-left-navigation{
+        display: inline-block;
+        ul{
+          margin: 0px;
+          margin-bottom: 10px;
+        }
+      }
+      #site-right-navigation{
+        display: inline-block;
+        width: auto;
+        ul{
+          margin: 0px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }

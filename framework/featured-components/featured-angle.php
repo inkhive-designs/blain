@@ -20,7 +20,8 @@
                 if ($lastposts -> have_posts() ) : ?>
 
 				<?php while ($lastposts -> have_posts() ) : $lastposts -> the_post() ; ?>
-                    <div class="col-md-4 col-sm-4 col-xs-12 imgcontainer">
+                <a href="<?php the_permalink()?>">
+                <div class="col-md-4 col-sm-4 col-xs-12 imgcontainer">
                         <div class="popimage">
                             <?php if (has_post_thumbnail()) : ?>
                                 <a href="<?php the_permalink()?>" title="<?php the_title() ?>"><?php the_post_thumbnail('blain-thumb',array(  'alt' => trim(strip_tags( $post->post_title )))); ?></a>
@@ -29,12 +30,22 @@
                             <?php endif; ?>
                         </div>
                         <div class="titledesc">
-                            <h3><a href="<?php the_permalink()?>" title="<?php the_title() ?>"><?php the_title(); ?></a></h3>
-                        <p class="description">
-                            <?php echo esc_html(substr(get_the_excerpt(),0,400).(get_the_excerpt() ? "..." : "" )); ?>
-                        </p>
+                            <?php $a= get_the_title();  $ttl_len = strlen($a); ?>
+                            <?php if($ttl_len >=  35): ?>
+                                <h3><a  title="<?php echo $a;?>"><?php echo substr($a,0,30).($a ? "..." : "" );?></a></h3>
+                            <?php else: ?>
+                            <h3><a href="<?php the_permalink()?>" title="<?php echo $a; ?>"><?php echo $a; ?></a></h3>
+                            <?php endif; ?>
+                            <a href="<?php the_permalink()?>">
+
+                                <p class="description">
+                                    <?php echo esc_html(substr(get_the_excerpt(),0,400).(get_the_excerpt() ? "..." : "" )); ?>
+                                </p>
+                            </a>
+
                         </div>
                     </div>
+                </a>
                 <?php endwhile; ?>
                     
                 <?php wp_reset_postdata(); ?>
